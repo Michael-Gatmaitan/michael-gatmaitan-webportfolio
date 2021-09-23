@@ -1,0 +1,96 @@
+nav {
+  display: fixed;
+  margin-top: 28px;
+}
+
+nav .nav-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+nav .nav-wrapper .logo-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 12px;
+}
+
+nav .nav-wrapper .logo-container .logo-image-container img {
+  height: 44px;
+}
+
+nav .nav-wrapper .logo-container .logo-name {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  color: #fff;
+}
+
+@media only screen and (min-width: 768px) {
+  nav .nav-wrapper .logo-container {
+    gap: 14px;
+  }
+  nav .nav-wrapper .logo-container .logo-image-container img {
+    height: 50px;
+  }
+  nav .nav-wrapper .logo-container .logo-name {
+    font-size: 16px !important;
+  }
+}
+
+nav .nav-wrapper .burger-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  place-items: center;
+}
+
+nav .nav-wrapper .burger-menu img {
+  width: 25px;
+}
+
+@media only screen and (min-width: 768px) {
+  nav .nav-wrapper .burger-menu {
+    display: none;
+  }
+}
+
+nav .nav-wrapper .button-container {
+  display: none;
+  gap: 30px;
+}
+
+nav .nav-wrapper .button-container button {
+  padding: 8px;
+  background-color: transparent;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  color: #fff;
+  cursor: pointer;
+}
+
+@media only screen and (min-width: 768px) {
+  nav .nav-wrapper .button-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+@media only screen and (min-width: 1025px) {
+  nav .nav-wrapper .button-container {
+    gap: 60px;
+  }
+}
+/*# sourceMappingURL=Nav.css.map */

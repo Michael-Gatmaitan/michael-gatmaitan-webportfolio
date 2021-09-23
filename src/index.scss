@@ -1,0 +1,21 @@
+@import './mixins.scss';
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=PT+Sans:wght@400;700&display=swap');
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  padding: 0 24px !important;
+  background-color: $primary_black;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+input, button {
+  outline: none;
+  border: none;
+}

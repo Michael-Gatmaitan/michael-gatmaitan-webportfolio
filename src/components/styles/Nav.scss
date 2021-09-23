@@ -1,0 +1,76 @@
+@import '../../mixins.scss';
+
+nav {
+  display: fixed;
+  margin-top: 28px;
+
+  .nav-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+
+      .logo-image-container {
+        img {
+          height: 44px;
+        }
+      }
+
+      .logo-name {
+        @include fontProp('Montserrat', 700, 14px, #fff);
+      }
+
+      @include tablet {
+        gap: 14px;
+
+        .logo-image-container {
+          img {
+            height: 50px;
+          }
+        }
+
+        .logo-name {
+          font-size: 16px !important;
+        }
+      }
+    }
+
+    .burger-menu {
+      @include flexCenter;
+
+      img {
+        width: 25px;
+      }
+
+      @include tablet {
+        display: none;
+      }
+    }
+
+    // Buttons
+    .button-container {
+      display: none;
+      gap: 30px;
+      
+      button {
+        padding: 8px;
+        background-color: transparent;
+        @include fontProp('Montserrat', 500, 14px, #fff);
+        cursor: pointer;
+      }
+
+      @include tablet {
+        display: flex;
+      }
+
+      @include desktop {
+        gap: 60px;
+      }
+    }
+  }
+
+}

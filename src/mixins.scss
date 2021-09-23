@@ -1,0 +1,25 @@
+$primary-black: #121212;
+
+@mixin tablet {
+  @media only screen and (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media only screen and (min-width: 1025px) {
+    @content;
+  }
+}
+
+@mixin flexCenter {
+  display: flex;
+  place-items: center;
+}
+
+@mixin fontProp($family, $weight, $size, $color: #121212) {
+  font-family: $family, sans-serif;
+  font-weight: $weight;
+  font-size: $size;
+  color: $color;
+}
