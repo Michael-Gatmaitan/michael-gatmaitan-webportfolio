@@ -1,8 +1,17 @@
 @import '../../mixins.scss';
 
 nav {
-  display: fixed;
+  position: fixed;
+  width: calc(100% - (24px * 2));
   margin-top: 28px;
+
+  @include tablet {
+    width: calc(100% - (30px * 2));
+  }
+
+  @include desktop {
+    width: calc(100% - (50px * 2));
+  }
 
   .nav-wrapper {
     display: flex;

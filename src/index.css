@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=PT+Sans:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=PT+Sans:wght@400;700&display=swap");
 html, body {
   margin: 0;
   padding: 0;
@@ -9,6 +9,18 @@ body {
   background-color: #121212;
 }
 
+@media only screen and (min-width: 768px) {
+  body {
+    padding: 0 30px !important;
+  }
+}
+
+@media only screen and (min-width: 1025px) {
+  body {
+    padding: 0 50px !important;
+  }
+}
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -17,5 +29,28 @@ body {
 input, button {
   outline: none;
   border: none;
+}
+
+.floating-logo-holder {
+  overflow: hidden;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 200%;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.floating-logo-holder .floating-logo {
+  position: absolute;
+  opacity: 0.08;
+}
+
+.page {
+  width: 100%;
+  height: 100vh;
+  position: relative;
 }
 /*# sourceMappingURL=index.css.map */

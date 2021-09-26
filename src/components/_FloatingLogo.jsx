@@ -1,15 +1,12 @@
-const FloatingLogo = ({ posStyles }) => {
+const FloatingLogo = ({ posStyles, elId }) => {
 
   const logoStyle = {
-    opacity: 0.08,
-    pointerEvents: 'none',
-    position: 'absolute',
     ...posStyles
   };
 
   return (
-    <div className="floating-logo" style={ logoStyle }>
-      <img src="./svg/my-logo/mg_logo_white.svg" alt="white-logo" width="192" />
+    <div className={`floating-logo floating-logo-${elId}`} style={ logoStyle }>
+      <img src="./svg/my-logo/mg_logo_white.svg" alt="white-logo" />
     </div>
   );
 }

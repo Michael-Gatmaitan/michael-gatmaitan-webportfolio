@@ -1,0 +1,28 @@
+.floating-logo {
+  width: 144px;
+}
+
+.floating-logo img {
+  width: 100%;
+}
+
+@media only screen and (min-width: 768px) {
+  .floating-logo {
+    width: 192px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .floating-logo-0 {
+    top: -92px !important;
+    left: 220px !important;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .floating-logo-1 {
+    top: 548px !important;
+    right: 85px !important;
+  }
+}
+/*# sourceMappingURL=FloatingLogoQueries.css.map */

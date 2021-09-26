@@ -1,0 +1,38 @@
+@import '../../../mixins.scss';
+
+.page-01 {
+  padding-top: 116px;
+
+  .creative-developer {
+    width: 100%;
+    @include flexCenter;
+    flex-direction: column;
+    text-align: center;
+
+    .creative {
+      @include fontProp('Montserrat', 700, 42px, #fff);
+      letter-spacing: 3.3px;
+    }
+
+    .developer {
+      @include fontProp('Montserrat', 600, 18px, #fff);
+      letter-spacing: 15.6px;
+      text-indent: 11px;
+    }
+
+    .fe-dev {
+      @include fontProp('Montserrat', 300, 14px, #fff);
+      letter-spacing: 3.4px;
+      padding-top: 12px;
+    }
+  }
+
+  .overflow-image {
+    width: 100%;
+    margin-top: 80px;
+
+    img {
+      width: 100%;
+    }
+  }
+}

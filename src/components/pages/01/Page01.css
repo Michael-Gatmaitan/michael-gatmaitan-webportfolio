@@ -1,0 +1,52 @@
+.page-01 {
+  padding-top: 116px;
+}
+
+.page-01 .creative-developer {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  place-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+}
+
+.page-01 .creative-developer .creative {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 42px;
+  color: #fff;
+  letter-spacing: 3.3px;
+}
+
+.page-01 .creative-developer .developer {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  color: #fff;
+  letter-spacing: 15.6px;
+  text-indent: 11px;
+}
+
+.page-01 .creative-developer .fe-dev {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  color: #fff;
+  letter-spacing: 3.4px;
+  padding-top: 12px;
+}
+
+.page-01 .overflow-image {
+  width: 100%;
+  margin-top: 80px;
+}
+
+.page-01 .overflow-image img {
+  width: 100%;
+}
+/*# sourceMappingURL=Page01.css.map */

@@ -1,0 +1,28 @@
+@import '../../mixins.scss';
+// IDs
+
+.floating-logo {
+  width: 144px;
+
+  img {
+    width: 100%;
+  }
+
+  @include tablet {
+    width: 192px;
+  }
+}
+
+.floating-logo-0 {
+  @include tablet {
+    top: -92px !important;
+    left: 220px !important;
+  }
+}
+
+.floating-logo-1 {
+  @include tablet {
+    top: 548px !important;
+    right: 85px !important; 
+  }
+}
