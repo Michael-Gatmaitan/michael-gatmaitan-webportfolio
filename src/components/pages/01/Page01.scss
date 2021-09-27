@@ -14,6 +14,7 @@
       overflow: hidden;
       min-width: 245px;
       max-width: 536px;
+      margin: 0 auto;
 
       .creative {
         @include fontProp('Montserrat', 700, 42px, #fff);
