@@ -27,7 +27,6 @@ function App() {
 
       <div className="page-container">
         <Page01 />
-        <Page01 />
       </div>
       
 

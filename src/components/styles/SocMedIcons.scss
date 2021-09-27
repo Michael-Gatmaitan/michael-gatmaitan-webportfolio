@@ -1,7 +1,34 @@
+@import '../../mixins.scss';
+
 .socmed-icons {
-  display: flex;
+  // display: flex;
+  display: none;
   gap: 24px;
   position: fixed;
   bottom: 53px;
   right: 30px;
+  z-index: 40;
+  justify-content: center;
+
+  .socmed-container {
+    width: 32px;
+    height: 32px;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  @include tablet {
+    display: flex;
+  }
+
+  @include desktop {
+    flex-direction: column;
+    width: 32px;
+    left: 50px;
+    top: 50%;
+    gap: 26px;
+    transform: translateY(-50%);
+  }
 }

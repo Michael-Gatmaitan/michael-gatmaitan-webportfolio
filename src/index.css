@@ -53,4 +53,15 @@ input, button {
   height: 100vh;
   position: relative;
 }
+
+.page .scroll-indicator {
+  width: 2px;
+  height: 120px;
+  background-color: #fff;
+  position: absolute;
+  bottom: 0;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  left: 50%;
+}
 /*# sourceMappingURL=index.css.map */

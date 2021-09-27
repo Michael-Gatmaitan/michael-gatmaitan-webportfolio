@@ -2,7 +2,7 @@
   padding-top: 116px;
 }
 
-.page-01 .creative-developer {
+.page-01 .page-01-content .creative-developer {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -13,9 +13,13 @@
       -ms-flex-direction: column;
           flex-direction: column;
   text-align: center;
+  z-index: 30;
+  overflow: hidden;
+  min-width: 245px;
+  max-width: 536px;
 }
 
-.page-01 .creative-developer .creative {
+.page-01 .page-01-content .creative-developer .creative {
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
   font-size: 42px;
@@ -23,7 +27,7 @@
   letter-spacing: 3.3px;
 }
 
-.page-01 .creative-developer .developer {
+.page-01 .page-01-content .creative-developer .developer {
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
   font-size: 18px;
@@ -32,7 +36,7 @@
   text-indent: 11px;
 }
 
-.page-01 .creative-developer .fe-dev {
+.page-01 .page-01-content .creative-developer .fe-dev {
   font-family: "Montserrat", sans-serif;
   font-weight: 300;
   font-size: 14px;
@@ -41,12 +45,59 @@
   padding-top: 12px;
 }
 
-.page-01 .overflow-image {
+.page-01 .page-01-content .overflow-image {
   width: 100%;
   margin-top: 80px;
 }
 
-.page-01 .overflow-image img {
+.page-01 .page-01-content .overflow-image img {
   width: 100%;
+  -webkit-transform-origin: left center;
+          transform-origin: left center;
+}
+
+@media only screen and (min-width: 768px) {
+  .page-01 .page-01-content .creative-developer {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    width: auto;
+  }
+  .page-01 .page-01-content .creative-developer div {
+    display: inline;
+  }
+  .page-01 .page-01-content .creative-developer .creative {
+    font-size: 92px !important;
+    letter-spacing: 7px !important;
+  }
+  .page-01 .page-01-content .creative-developer .developer {
+    font-size: 42px !important;
+    letter-spacing: 32.4px !important;
+    text-indent: 30px !important;
+  }
+  .page-01 .page-01-content .creative-developer .fe-dev {
+    font-size: 32px !important;
+    letter-spacing: 6.6px !important;
+    padding-top: 24px !important;
+  }
+  .page-01 .page-01-content .overflow-image {
+    margin-top: 0;
+    position: absolute;
+    left: 30px;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+  }
+  .page-01 .page-01-content .overflow-image img {
+    width: 580px;
+  }
+}
+
+@media only screen and (min-width: 1025px) {
+  .page-01 .page-01-content .overflow-image img {
+    width: 680px;
+  }
 }
 /*# sourceMappingURL=Page01.css.map */

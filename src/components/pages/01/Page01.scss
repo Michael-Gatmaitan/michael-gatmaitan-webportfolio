@@ -3,36 +3,109 @@
 .page-01 {
   padding-top: 116px;
 
-  .creative-developer {
-    width: 100%;
-    @include flexCenter;
-    flex-direction: column;
-    text-align: center;
+  .page-01-content {
 
-    .creative {
-      @include fontProp('Montserrat', 700, 42px, #fff);
-      letter-spacing: 3.3px;
-    }
-
-    .developer {
-      @include fontProp('Montserrat', 600, 18px, #fff);
-      letter-spacing: 15.6px;
-      text-indent: 11px;
-    }
-
-    .fe-dev {
-      @include fontProp('Montserrat', 300, 14px, #fff);
-      letter-spacing: 3.4px;
-      padding-top: 12px;
-    }
-  }
-
-  .overflow-image {
-    width: 100%;
-    margin-top: 80px;
-
-    img {
+    .creative-developer {
       width: 100%;
+      @include flexCenter;
+      flex-direction: column;
+      text-align: center;
+      z-index: 30;
+      overflow: hidden;
+      min-width: 245px;
+      max-width: 536px;
+
+      .creative {
+        @include fontProp('Montserrat', 700, 42px, #fff);
+        letter-spacing: 3.3px;
+      }
+
+      .developer {
+        @include fontProp('Montserrat', 600, 18px, #fff);
+        letter-spacing: 15.6px;
+        text-indent: 11px;
+      }
+
+      .fe-dev {
+        @include fontProp('Montserrat', 300, 14px, #fff);
+        letter-spacing: 3.4px;
+        padding-top: 12px;
+      }
+    }
+
+    .overflow-image {
+      width: 100%;
+      margin-top: 80px;
+
+      img {
+        width: 100%;
+        transform-origin: left center;
+      }
+    }
+
+    // Page-01 Tablet mode
+    @include tablet {
+      
+      .creative-developer {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: auto;
+
+        div {
+          display: inline;
+        }
+
+        .creative {
+          font-size: 92px !important;
+          letter-spacing: 7px !important;
+        }
+  
+        .developer {
+          font-size: 42px !important;
+          letter-spacing: 32.4px !important;
+          text-indent: 30px !important;
+        }
+  
+        .fe-dev {
+          font-size: 32px !important;
+          letter-spacing: 6.6px !important;
+          padding-top: 24px !important;
+        }
+      }
+
+      .overflow-image {
+        margin-top: 0;
+        position: absolute;
+        left: 30px;
+        top: 50%;
+        transform: translateY(-50%);
+
+        img {
+          width: 580px;
+        }
+      }
+    }
+
+    @include desktop {
+      // .creative-developer {
+      //   position: absolute;
+      //   right: 0;
+      //   top: 50%;
+      //   transform: translateY(-50%);
+      //   width: auto;
+
+      //   div {
+      //     display: inline;
+      //   }
+      // }
+
+      .overflow-image {
+        img {
+          width: 680px;
+        }
+      }
     }
   }
 }

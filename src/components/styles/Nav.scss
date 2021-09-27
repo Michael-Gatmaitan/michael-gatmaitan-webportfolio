@@ -4,6 +4,7 @@ nav {
   position: fixed;
   width: calc(100% - (24px * 2));
   margin-top: 28px;
+  z-index: 50;
 
   @include tablet {
     width: calc(100% - (30px * 2));
