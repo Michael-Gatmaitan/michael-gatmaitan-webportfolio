@@ -48,6 +48,10 @@ input, button {
   opacity: 0.08;
 }
 
+::-webkit-scrollbar {
+  display: none;
+}
+
 .page {
   width: 100%;
   height: 100vh;

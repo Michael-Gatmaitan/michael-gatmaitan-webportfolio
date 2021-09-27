@@ -53,8 +53,6 @@
 
 .page-01 .page-01-content .overflow-image img {
   width: 100%;
-  -webkit-transform-origin: left center;
-          transform-origin: left center;
 }
 
 @media only screen and (min-width: 768px) {
@@ -86,7 +84,7 @@
   .page-01 .page-01-content .overflow-image {
     margin-top: 0;
     position: absolute;
-    left: 30px;
+    left: 0;
     top: 50%;
     -webkit-transform: translateY(-50%);
             transform: translateY(-50%);
@@ -97,6 +95,12 @@
 }
 
 @media only screen and (min-width: 1025px) {
+  .page-01 .page-01-content .creative-developer {
+    right: 50px;
+  }
+  .page-01 .page-01-content .overflow-image {
+    left: 90px;
+  }
   .page-01 .page-01-content .overflow-image img {
     width: 680px;
   }

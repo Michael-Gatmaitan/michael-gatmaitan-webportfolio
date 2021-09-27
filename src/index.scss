@@ -45,6 +45,10 @@ input, button {
   }
 }
 
+::-webkit-scrollbar {
+  display: none;
+}
+
 
 .page {
   width: 100%;

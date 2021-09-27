@@ -1,0 +1,115 @@
+.page-02 {
+  padding-top: 110px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto;
+      grid-template-columns: auto;
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
+}
+
+.page-02 .stats {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 18px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.page-02 .stats .stat-des .stat-header {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 32px;
+  color: #fff;
+}
+
+.page-02 .stats .stat-des .stat-body-text {
+  font-family: "PT Sans", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.7);
+  margin-top: 12px;
+}
+
+@media only screen and (min-width: 768px) {
+  .page-02 .stats .stat-des .stat-body-text {
+    font-size: 18px !important;
+  }
+}
+
+.page-02 .stats .stats-container {
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 12px;
+}
+
+.page-02 .stats .stats-container .stat-bar {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 45px;
+      grid-template-columns: 1fr 45px;
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
+  grid-gap: 18px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.page-02 .stats .stats-container .stat-bar .percentage-container .percentage-label {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.46);
+  padding-bottom: 2px;
+  position: absolute;
+}
+
+.page-02 .stats .stats-container .stat-bar .percentage-container .percentage-wrapper {
+  width: 100%;
+  height: 5px;
+  border-radius: 5px;
+  overflow: hidden;
+  background-color: #424242;
+}
+
+.page-02 .stats .stats-container .stat-bar .percentage-container .percentage-wrapper .percentage-value {
+  height: 100%;
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+.page-02 .stats .stats-container .stat-bar .language-label {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  color: #fff;
+  text-align: right;
+}
+
+.page-02 .tools {
+  display: none;
+  background-color: #00f;
+}
+
+@media only screen and (min-width: 768px) {
+  .page-02 {
+    -ms-grid-columns: auto minmax(0, 440px);
+        grid-template-columns: auto minmax(0, 440px);
+    grid-gap: 48px;
+  }
+  .page-02 .tools {
+    display: block;
+  }
+}
+
+@media only screen and (min-width: 1025px) {
+  .page-02 {
+    padding: 0 90px;
+    grid-gap: 70px;
+  }
+}
+/*# sourceMappingURL=Page02.css.map */

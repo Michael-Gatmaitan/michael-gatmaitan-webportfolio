@@ -1,0 +1,87 @@
+@import '../../../mixins.scss';
+
+.page-02 {
+  padding-top: 110px;
+  display: grid;
+  grid-template-columns: auto;
+  // grid-template-columns: auto minmax(0, 440px);
+  grid-template-rows: auto;
+
+  .stats {
+    display: flex;
+    gap: 18px;
+    flex-direction: column;
+
+    .stat-des {
+      
+      .stat-header {
+        @include fontProp('Montserrat', 700, 32px, #fff);
+      }
+
+      .stat-body-text {
+        @include fontProp('PT Sans', 400, 16px, rgba(#fff, 0.7));
+        margin-top: 12px;
+
+        @include tablet {
+          font-size: 18px !important;
+        }
+      }
+    }
+
+    .stats-container {
+      display: grid;
+      grid-gap: 12px;
+
+      .stat-bar {
+        display: grid;
+        grid-template-columns: 1fr 45px;
+        grid-template-rows: auto;
+        grid-gap: 18px;
+        align-items: center;
+
+        .percentage-container {
+
+          .percentage-wrapper {
+            width: 100%;
+            height: 5px;
+            border-radius: 5px;
+            overflow: hidden;
+            background-color: #424242;
+            
+            .percentage-value {
+              height: 100%;
+              border-radius: 5px;
+              background-color: #fff;
+            }
+          }
+        }
+
+        .language-label {
+          @include fontProp('Montserrat', 500, 14px, #fff);
+          text-align: right;
+        }
+      }
+    }
+
+  }
+
+  .tools {
+    display: none;
+    background-color: #00f;
+  }
+
+  @include tablet {
+    grid-template-columns: auto minmax(0, 440px);
+    grid-gap: 48px;
+
+    .tools {
+      display: block;
+    }
+  }
+  
+  @include desktop {
+    padding: 0 90px;
+    grid-gap: 70px;
+  }
+
+}
