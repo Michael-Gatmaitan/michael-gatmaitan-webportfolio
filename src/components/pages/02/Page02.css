@@ -59,15 +59,6 @@
           align-items: center;
 }
 
-.page-02 .stats .stats-container .stat-bar .percentage-container .percentage-label {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 500;
-  font-size: 14px;
-  color: rgba(255, 255, 255, 0.46);
-  padding-bottom: 2px;
-  position: absolute;
-}
-
 .page-02 .stats .stats-container .stat-bar .percentage-container .percentage-wrapper {
   width: 100%;
   height: 5px;
@@ -90,6 +81,31 @@
   text-align: right;
 }
 
+.page-02 .stats .more-button-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.page-02 .stats .more-button-container .more-button {
+  padding: 8px 27px;
+  background-color: #fff;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 14px #121212;
+  color: #121212;
+  border-radius: 4px;
+}
+
+@media only screen and (min-width: 768px) {
+  .page-02 .stats .more-button-container {
+    display: none;
+  }
+}
+
 .page-02 .tools {
   display: none;
   background-color: #00f;
@@ -108,7 +124,7 @@
 
 @media only screen and (min-width: 1025px) {
   .page-02 {
-    padding: 0 90px;
+    padding: 110px 90px 0 90px;
     grid-gap: 70px;
   }
 }

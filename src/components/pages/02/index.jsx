@@ -6,12 +6,17 @@ const Page02 = () => {
     <div className="page page-02">
 
       <div className="stats">
+
         <div className="stat-des">
           <div className="stat-header">
             IM A FRONT-END DEVELOPER
           </div>
           <div className="stat-body-text">
-            A simple personal portfolio website can never do you wrong. Simple can be beautiful. When going for a minimalist approach, you must focus on other things to grab the user’s attention and really understand the experience the user will take away from viewing your online portfolio.
+          from Marilao, Bulacan, Philippines. I’m 18 years old, 
+          and I taught myself how to code for 3 years now. 
+          I finished my senior high-school last year (2020) 
+          and now, I’m hoping that I can land my first job 
+          in tech to help my parents financially stabled.
           </div>
         </div>
 
@@ -23,6 +28,11 @@ const Page02 = () => {
           <StatBar languageLabel="REACT" percentage={85}/>
           <StatBar languageLabel="TS" percentage={60}/>
         </div>
+
+        <div className="more-button-container">
+          <button className="more-button">More</button>
+        </div>
+
       </div>
 
       <div className="tools"></div>
@@ -34,6 +44,7 @@ const Page02 = () => {
 }
 
 const StatBar = ({ languageLabel, percentage }) => {
+
   return (
     <div className="stat-bar">
       <div className="percentage-container">

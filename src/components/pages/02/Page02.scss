@@ -63,6 +63,24 @@
       }
     }
 
+    .more-button-container {
+      display: flex;
+      justify-content: flex-end;
+
+      .more-button {
+        padding: 8px 27px;
+        background-color: #fff;
+        @include fontProp('Montserrat', 600, 14px #121212);
+        border-radius: 4px;
+      }
+    }
+
+    @include tablet {
+      .more-button-container {
+        display: none;
+      }
+    }
+
   }
 
   .tools {
@@ -80,7 +98,7 @@
   }
   
   @include desktop {
-    padding: 0 90px;
+    padding: 110px 90px 0 90px;
     grid-gap: 70px;
   }
 
