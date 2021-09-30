@@ -34,12 +34,6 @@
   margin-top: 12px;
 }
 
-@media only screen and (min-width: 768px) {
-  .page-02 .stats .stat-des .stat-body-text {
-    font-size: 18px !important;
-  }
-}
-
 .page-02 .stats .stats-container {
   display: -ms-grid;
   display: grid;
@@ -62,14 +56,14 @@
 .page-02 .stats .stats-container .stat-bar .percentage-container .percentage-wrapper {
   width: 100%;
   height: 5px;
-  border-radius: 5px;
+  border-radius: 10px;
   overflow: hidden;
   background-color: #424242;
 }
 
 .page-02 .stats .stats-container .stat-bar .percentage-container .percentage-wrapper .percentage-value {
   height: 100%;
-  border-radius: 5px;
+  border-radius: 10px;
   background-color: #fff;
 }
 
@@ -101,14 +95,40 @@
 }
 
 @media only screen and (min-width: 768px) {
+  .page-02 .stats .stat-des .stat-header {
+    font-size: 36px !important;
+  }
+  .page-02 .stats .stat-des .stat-body-text {
+    font-size: 18px !important;
+    margin-top: 14px;
+  }
+  .page-02 .stats .stats-container {
+    grid-gap: 14px;
+  }
+  .page-02 .stats .stats-container .stat-bar {
+    -ms-grid-columns: 1fr 56px;
+        grid-template-columns: 1fr 56px;
+  }
+  .page-02 .stats .stats-container .stat-bar .percentage-container .percentage-wrapper {
+    height: 6px;
+  }
+  .page-02 .stats .stats-container .stat-bar .language-label {
+    font-size: 18px !important;
+  }
   .page-02 .stats .more-button-container {
     display: none;
   }
 }
 
+@media only screen and (min-width: 1025px) {
+  .page-02 .stats .stat-des .stat-header {
+    font-size: 42px !important;
+  }
+}
+
 .page-02 .tools {
   display: none;
-  background-color: #00f;
+  background-color: #f0f;
 }
 
 @media only screen and (min-width: 768px) {

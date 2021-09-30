@@ -2,6 +2,16 @@ import PageNumber from '../../PageNumber';
 import './Page02.css';
 
 const Page02 = () => {
+
+  const statBarsData =[
+    { language: "HTML", percentage: 90, key: 0 },
+    { language: "CSS", percentage: 80, key: 1 },
+    { language: "SASS", percentage: 75, key: 2 },
+    { language: "JS", percentage: 85, key: 3 },
+    { language: "React", percentage: 85, key: 4 },
+    { language: "TS", percentage: 60, key: 5 },
+  ]
+
   return (
     <div className="page page-02">
 
@@ -21,12 +31,15 @@ const Page02 = () => {
         </div>
 
         <div className="stats-container">
-          <StatBar languageLabel="HTML" percentage={90}/>
-          <StatBar languageLabel="CSS" percentage={80}/>
-          <StatBar languageLabel="SASS" percentage={75}/>
-          <StatBar languageLabel="JS" percentage={85}/>
-          <StatBar languageLabel="REACT" percentage={85}/>
-          <StatBar languageLabel="TS" percentage={60}/>
+
+          {statBarsData.map(statData => (
+            <StatBar
+              languageLabel={statData.language}
+              percentage={statData.percentage}
+              key={statData.key}
+            />
+          ))}
+
         </div>
 
         <div className="more-button-container">
@@ -35,7 +48,11 @@ const Page02 = () => {
 
       </div>
 
-      <div className="tools"></div>
+      <div className="tools-contianer">
+        <div className="tools-wrapper">
+          
+        </div>
+      </div>
       
       
       <PageNumber pageNumber={"02"} />

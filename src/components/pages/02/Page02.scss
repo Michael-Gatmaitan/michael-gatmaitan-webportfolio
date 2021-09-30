@@ -21,10 +21,6 @@
       .stat-body-text {
         @include fontProp('PT Sans', 400, 16px, rgba(#fff, 0.7));
         margin-top: 12px;
-
-        @include tablet {
-          font-size: 18px !important;
-        }
       }
     }
 
@@ -44,13 +40,13 @@
           .percentage-wrapper {
             width: 100%;
             height: 5px;
-            border-radius: 5px;
+            border-radius: 10px;
             overflow: hidden;
             background-color: #424242;
             
             .percentage-value {
               height: 100%;
-              border-radius: 5px;
+              border-radius: 10px;
               background-color: #fff;
             }
           }
@@ -76,30 +72,69 @@
     }
 
     @include tablet {
+      .stat-des {
+
+        .stat-header {
+          font-size: 36px !important;
+        }
+
+        .stat-body-text {
+          font-size: 18px !important;
+          margin-top: 14px;
+        }
+      }
+
+      .stats-container {
+        grid-gap: 14px;
+
+        .stat-bar {
+          grid-template-columns: 1fr 56px;
+
+          .percentage-container {
+
+            .percentage-wrapper {
+              height: 6px;
+            }
+          }
+
+          .language-label {
+            font-size: 18px !important;
+          }
+        }
+      }
+
       .more-button-container {
         display: none;
       }
     }
 
+    @include desktop {
+      .stat-des {
+        
+        .stat-header {
+          font-size: 42px !important;
+        }
+      }
+    }
   }
 
+
   .tools {
-    display: none;
-    background-color: #00f;
+    opacity: 0;
+    pointer-events: none;
+    background-color: #f0f;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    
   }
 
   @include tablet {
     grid-template-columns: auto minmax(0, 440px);
     grid-gap: 48px;
-
-    .tools {
-      display: block;
-    }
   }
   
   @include desktop {
     padding: 110px 90px 0 90px;
     grid-gap: 70px;
   }
-
 }
