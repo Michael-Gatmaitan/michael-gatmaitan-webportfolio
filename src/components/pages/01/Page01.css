@@ -48,7 +48,8 @@
 
 .page-01 .page-01-content .overflow-image {
   width: 100%;
-  margin-top: 80px;
+  margin: 80px auto 0 auto;
+  max-width: 400px;
 }
 
 .page-01 .page-01-content .overflow-image img {
@@ -88,6 +89,7 @@
     top: 50%;
     -webkit-transform: translateY(-50%);
             transform: translateY(-50%);
+    max-width: none;
   }
   .page-01 .page-01-content .overflow-image img {
     width: 580px;
