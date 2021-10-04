@@ -1,5 +1,5 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 // import { motion } from 'framer-motion';
 
 import './components/styles/FloatingLogoQueries.css';
@@ -9,6 +9,7 @@ import Nav from './components/Nav';
 import FloatingLogo from './components/_FloatingLogo';
 import SocMedIcons from './components/SocMedIcons';
 // import ScrollDown from './components/ScrollDown';
+import ModalToolsMobile from './components/ModalToolsMobile';
 
 // Pages
 import Page01 from './components/pages/01/index';
@@ -16,8 +17,10 @@ import Page02 from './components/pages/02/index';
 
 function App() {
   
+  let [showModal, setShowModal] = useState(true);
+
   return (
-    <React.Fragment>
+    <>
       {/* <Root> */}
 
       <div className="floating-logo-holder">
@@ -28,15 +31,21 @@ function App() {
 
       <Nav />
       <SocMedIcons />
+      <ModalToolsMobile
+        showModal={showModal}
+        setShowModal={setShowModal}
+        modalType={true}
+      />
+
       {/* <ScrollDown /> */}
 
       <div className="page-container">
         <Page01 />
-        <Page02 />
+        <Page02 setShowModal={setShowModal} />
       </div>
 
       {/* </Root> */}
-    </React.Fragment>
+    </>
   );
 }
 

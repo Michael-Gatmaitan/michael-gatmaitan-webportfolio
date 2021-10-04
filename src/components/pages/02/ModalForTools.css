@@ -1,0 +1,86 @@
+.tools-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 12px;
+  width: 100%;
+}
+
+.tools-wrapper .tools {
+  padding: 18px;
+  background-color: #F6F6F6;
+  border-radius: 12px;
+}
+
+.tools-wrapper .tools .tools-header-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.tools-wrapper .tools .tools-header-container .tools-header {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 32px;
+  color: #000;
+}
+
+.tools-wrapper .tools .tools-header-container .close-tools {
+  width: 28px;
+  height: 28px;
+}
+
+.tools-wrapper .tools .tools-header-container .close-tools img {
+  width: 100%;
+}
+
+@media only screen and (min-width: 768px) {
+  .tools-wrapper .tools .tools-header-container .close-tools {
+    display: none;
+  }
+}
+
+.tools-wrapper .tools .tools-used-section .tools-sub-header {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  color: #000;
+}
+
+.tools-wrapper .tools .tools-used-section .tool-icons-container {
+  margin-top: 12px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 14px;
+}
+
+.tools-wrapper .tools .tools-used-section .tool-icons-container .tool-icon {
+  width: 32px;
+  height: 32px;
+}
+
+.tools-wrapper .tools .tools-used-section .tool-icons-container .tool-icon img {
+  width: 100%;
+}
+
+.tools-wrapper .see-resume {
+  border-radius: 12px;
+  padding: 14px 0;
+  background-color: #F6F6F6;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  color: #000;
+}
+/*# sourceMappingURL=ModalForTools.css.map */

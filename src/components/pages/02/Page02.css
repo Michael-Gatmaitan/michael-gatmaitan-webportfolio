@@ -127,115 +127,12 @@
 }
 
 .page-02 .tools-container {
-  opacity: 1;
-  pointer-events: auto;
-  background-color: rgba(0, 0, 0, 0.6);
-  position: fixed;
-  width: 100vw;
-  height: 100vh;
-  top: 0;
-  left: 0;
-  padding: 24px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  place-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.page-02 .tools-container .tools-wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  gap: 12px;
-  width: 100%;
-}
-
-.page-02 .tools-container .tools-wrapper .tools {
-  padding: 18px;
-  background-color: #F6F6F6;
-  border-radius: 12px;
-}
-
-.page-02 .tools-container .tools-wrapper .tools .tools-header-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.page-02 .tools-container .tools-wrapper .tools .tools-header-container .tools-header {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 700;
-  font-size: 32px;
-  color: #000;
-}
-
-.page-02 .tools-container .tools-wrapper .tools .tools-header-container .close-tools {
-  width: 28px;
-  height: 28px;
-}
-
-.page-02 .tools-container .tools-wrapper .tools .tools-header-container .close-tools img {
-  width: 100%;
-}
-
-.page-02 .tools-container .tools-wrapper .tools .tools-used-section .tools-sub-header {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 700;
-  font-size: 24px;
-  color: #000;
-}
-
-.page-02 .tools-container .tools-wrapper .tools .tools-used-section .tool-icons-container {
-  margin-top: 12px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 14px;
-}
-
-.page-02 .tools-container .tools-wrapper .tools .tools-used-section .tool-icons-container .tool-icon {
-  width: 32px;
-  height: 32px;
-}
-
-.page-02 .tools-container .tools-wrapper .tools .tools-used-section .tool-icons-container .tool-icon img {
-  width: 100%;
-}
-
-.page-02 .tools-container .tools-wrapper .see-resume {
-  border-radius: 12px;
-  padding: 14px 0;
-  background-color: #F6F6F6;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 600;
-  font-size: 16px;
-  color: #000;
+  display: none;
 }
 
 @media only screen and (min-width: 768px) {
   .page-02 .tools-container {
-    opacity: 1;
-    pointer-events: auto;
-    position: static;
-    width: auto;
-    height: auto;
     display: block;
-  }
-  .page-02 .tools-container .tools-wrapper {
-    width: 100%;
   }
 }
 

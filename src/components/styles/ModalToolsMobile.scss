@@ -1,0 +1,26 @@
+@import '../../mixins.scss';
+
+.modal-tools {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 30;
+  padding: 0 24px;
+  @include flexCenter;
+
+  .dark-bg {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(#000, 0.6);
+    z-index: -1;
+  }
+
+  @include tablet {
+    display: none;
+  }
+}

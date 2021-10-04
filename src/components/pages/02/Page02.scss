@@ -118,90 +118,11 @@
     }
   }
 
-
   .tools-container {
-    opacity: 1;
-    pointer-events: auto;
-    background-color: rgba(#000, 0.6);
-    position: fixed;
-    width: 100vw;
-    height: 100vh;
-    top: 0;
-    left: 0;
-    padding: 24px;
-    @include flexCenter;
-    
-    .tools-wrapper {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-      width: 100%;
-      
-      .tools {
-        padding: 18px;
-        background-color: $white;
-        border-radius: 12px;
-
-        .tools-header-container {
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
-
-          .tools-header {
-            @include fontProp('Montserrat', 700, 32px);
-          }
-
-          .close-tools {
-            width: 28px;
-            height: 28px;
-
-            img { width: 100%; }
-          }
-        }
-
-        .tools-used-section {
-          
-          .tools-sub-header {
-            @include fontProp('Montserrat', 700, 24px);
-          }
-
-          .tool-icons-container {
-            margin-top: 12px;
-            display: flex;
-            gap: 14px;
-
-            .tool-icon {
-              width: 32px;
-              height: 32px;
-
-              img {
-                width: 100%;
-              }
-            }
-          }
-        }
-      }
-
-      .see-resume {
-        border-radius: 12px;
-        padding: 14px 0;
-        background-color: $white;
-        @include fontProp('Montserrat', 600, 16px);
-      }
-    }
+    display: none;
 
     @include tablet {
-      // Overrides all styling from mobile view
-      opacity: 1;
-      pointer-events: auto;
-      position: static;
-      width: auto;
-      height: auto;
       display: block;
-
-      .tools-wrapper {
-        width: 100%;
-      }
     }
   }
 
