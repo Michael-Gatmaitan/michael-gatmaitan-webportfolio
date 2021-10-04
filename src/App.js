@@ -17,7 +17,7 @@ import Page02 from './components/pages/02/index';
 
 function App() {
   
-  let [showModal, setShowModal] = useState(true);
+  let [showModal, setShowModal] = useState(false);
 
   return (
     <>
