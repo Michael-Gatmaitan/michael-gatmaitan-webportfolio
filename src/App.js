@@ -8,12 +8,12 @@ import './components/styles/FloatingLogoQueries.css';
 import Nav from './components/Nav';
 import FloatingLogo from './components/_FloatingLogo';
 import SocMedIcons from './components/SocMedIcons';
-// import ScrollDown from './components/ScrollDown';
 import ModalToolsMobile from './components/ModalToolsMobile';
 
 // Pages
 import Page01 from './components/pages/01/index';
 import Page02 from './components/pages/02/index';
+import Page03 from './components/pages/03/index';
 
 function App() {
   
@@ -37,11 +37,10 @@ function App() {
         modalType={true}
       />
 
-      {/* <ScrollDown /> */}
-
       <div className="page-container">
         <Page01 />
         <Page02 setShowModal={setShowModal} />
+        <Page03 />
       </div>
 
       {/* </Root> */}
