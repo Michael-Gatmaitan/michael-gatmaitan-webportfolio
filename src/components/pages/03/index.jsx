@@ -57,11 +57,20 @@ const Page03 = () => {
 
 const Card = ({ cardInfo }) => {
 
+  const {
+    title,
+    imgSrc,
+    // galleryDirectory
+  } = cardInfo;
+
+  const projectLogo = `./images/project-logos/${imgSrc}.png`;
+
   return (
     <div className="project-card">
+      <div className="project-title">{title}</div>
       <div className="dark-bg" />
-      <div className="project-title">
-        {cardInfo.title}
+      <div className="project-logo-container">
+        <img src={projectLogo} alt="" />
       </div>
     </div>
   )
