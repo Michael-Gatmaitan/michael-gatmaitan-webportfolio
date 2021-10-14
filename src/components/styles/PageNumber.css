@@ -1,6 +1,8 @@
 .page-number-container {
   position: absolute;
   bottom: 34px;
+  left: 0;
+  z-index: 30;
 }
 
 .page-number-container .page-number {

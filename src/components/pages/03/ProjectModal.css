@@ -1,0 +1,79 @@
+.project-modal-container {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 24px;
+  z-index: 60;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  place-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.project-modal-container .prev-container {
+  margin-right: 30px;
+}
+
+.project-modal-container .next-container {
+  margin-left: 30px;
+}
+
+.project-modal-container .prev-container, .project-modal-container .next-container {
+  height: 100%;
+  background-color: #f00;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  place-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: none;
+}
+
+@media only screen and (min-width: 768px) {
+  .project-modal-container .prev-container, .project-modal-container .next-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+.project-modal-container .prev-container div, .project-modal-container .next-container div {
+  width: 100%;
+  padding: 12px;
+  background-color: #00f;
+}
+
+.project-modal-container .project-modal {
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto;
+      grid-template-columns: auto;
+  grid-auto-rows: auto;
+  grid-gap: 12px;
+  border-radius: 12px;
+}
+
+.project-modal-container .project-modal div {
+  background-color: #00f;
+}
+
+@media only screen and (min-width: 768px) {
+  .project-modal-container .project-modal {
+    max-width: 680px;
+    -ms-grid-columns: auto auto;
+        grid-template-columns: auto auto;
+    max-height: 490px;
+  }
+}
+/*# sourceMappingURL=ProjectModal.css.map */

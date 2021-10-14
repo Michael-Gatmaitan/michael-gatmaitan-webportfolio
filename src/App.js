@@ -9,6 +9,7 @@ import Nav from './components/Nav';
 import FloatingLogo from './components/_FloatingLogo';
 import SocMedIcons from './components/SocMedIcons';
 import ModalToolsMobile from './components/ModalToolsMobile';
+import ProjectModal from './components/pages/03/ProjectModal';
 
 // Pages
 import Page01 from './components/pages/01/index';
@@ -18,6 +19,8 @@ import Page03 from './components/pages/03/index';
 function App() {
   
   let [showModal, setShowModal] = useState(false);
+
+  let [showProjectModal, setShowProjectModal] = useState(false);
 
   return (
     <>
@@ -36,11 +39,15 @@ function App() {
         setShowModal={setShowModal}
         modalType={true}
       />
+      <ProjectModal
+        showProjectModal={showProjectModal}
+        setShowProjectModal={setShowProjectModal}
+      />
 
       <div className="page-container">
         <Page01 />
         <Page02 setShowModal={setShowModal} />
-        <Page03 />
+        <Page03 setShowProjectModal={setShowProjectModal} />
       </div>
 
       {/* </Root> */}
