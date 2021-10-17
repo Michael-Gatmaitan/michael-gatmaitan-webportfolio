@@ -22,6 +22,8 @@ function App() {
 
   let [showProjectModal, setShowProjectModal] = useState(false);
 
+  let [projectData, setProjectData] = useState({});
+
   return (
     <>
       {/* <Root> */}
@@ -42,12 +44,17 @@ function App() {
       <ProjectModal
         showProjectModal={showProjectModal}
         setShowProjectModal={setShowProjectModal}
+        projectData={projectData}
+        setProjectData={setProjectData}
       />
 
       <div className="page-container">
         <Page01 />
         <Page02 setShowModal={setShowModal} />
-        <Page03 setShowProjectModal={setShowProjectModal} />
+        <Page03
+          setShowProjectModal={setShowProjectModal}
+          setProjectData={setProjectData}
+        />
       </div>
 
       {/* </Root> */}

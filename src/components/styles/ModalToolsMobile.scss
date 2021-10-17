@@ -8,6 +8,8 @@
   left: 0;
   z-index: 30;
   padding: 0 24px;
+  z-index: 60;
+  transition: 0.07s ease-in;
   @include flexCenter;
 
   .dark-bg {

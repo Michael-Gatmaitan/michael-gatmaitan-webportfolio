@@ -1,10 +1,13 @@
 import './ProjectModal.css';
 
-const ProjectModal = (props) => {
+const ProjectModal = props => {
 
   const {
     showProjectModal,
-    setShowProjectModal
+    setShowProjectModal,
+
+    projectData,
+    // setProjectData
   } = props;
 
   const modalStyle = {
@@ -21,18 +24,32 @@ const ProjectModal = (props) => {
       onClick={() => setShowProjectModal(false)}
     >
       <div className="prev-container">
-        <div className="prev">
+        <div className="prev" onClick={e => {
+          propagationStopper(e);
+        }}>
           <img src="./svg/body-icons/prev.svg" alt="" />
         </div>
       </div>
 
       <div className="project-modal" onClick={ propagationStopper }>
-        <div></div>
-        <div></div>
+        <div className="project-info">
+          <div className="project-info-header"></div>
+          <div className="project-info-gallery"></div>
+          <div className="project-info-footer">
+            <button>Open Website</button>
+            <button>Guthub repo</button>
+          </div>
+        </div>
+
+        <div className="project-description"></div>
       </div>
 
       <div className="next-container">
-        <div className="next">
+        <div className="next" onClick={e => {
+          propagationStopper(e);
+
+
+        }}>
           <img src="./svg/body-icons/next.svg" alt="" />
         </div>
       </div>

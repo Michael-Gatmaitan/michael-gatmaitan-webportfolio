@@ -6,6 +6,9 @@
   left: 0;
   z-index: 30;
   padding: 0 24px;
+  z-index: 60;
+  -webkit-transition: 0.07s ease-in;
+  transition: 0.07s ease-in;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

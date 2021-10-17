@@ -14,6 +14,8 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-transition: 0.07s ease-in;
+  transition: 0.07s ease-in;
 }
 
 .project-modal-container .prev-container {
@@ -26,7 +28,6 @@
 
 .project-modal-container .prev-container, .project-modal-container .next-container {
   height: 100%;
-  background-color: #f00;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -48,32 +49,92 @@
 .project-modal-container .prev-container div, .project-modal-container .next-container div {
   width: 100%;
   padding: 12px;
-  background-color: #00f;
 }
 
 .project-modal-container .project-modal {
   width: 100%;
   height: 100%;
-  background-color: #fff;
+  background-color: #F6F6F6;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: auto;
       grid-template-columns: auto;
-  grid-auto-rows: auto;
-  grid-gap: 12px;
+  -ms-grid-rows: auto auto;
+      grid-template-rows: auto auto;
+  grid-gap: 14px;
+  overflow: hidden;
   border-radius: 12px;
+  padding: 12px;
 }
 
 .project-modal-container .project-modal div {
-  background-color: #00f;
+  background-color: #ff0;
+}
+
+.project-modal-container .project-modal .project-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 12px;
+}
+
+.project-modal-container .project-modal .project-info .project-info-header {
+  height: 80px;
+}
+
+.project-modal-container .project-modal .project-info .project-info-gallery {
+  height: 250px;
+}
+
+.project-modal-container .project-modal .project-info .project-info-footer {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  grid-gap: 8px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.project-modal-container .project-modal .project-info .project-info-footer button {
+  background-color: #121212;
+  padding: 12px 0;
+  border-radius: 4px;
+  border: solid 5px #000;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  color: #fff;
+}
+
+.project-modal-container .project-modal .project-info .project-info-footer button:nth-of-type(2) {
+  background-color: transparent;
+  color: #000 !important;
 }
 
 @media only screen and (min-width: 768px) {
   .project-modal-container .project-modal {
     max-width: 680px;
-    -ms-grid-columns: auto auto;
-        grid-template-columns: auto auto;
+    -ms-grid-columns: auto 300px;
+        grid-template-columns: auto 300px;
+    -ms-grid-rows: auto;
+        grid-template-rows: auto;
     max-height: 490px;
+    padding: 24px;
+  }
+}
+
+@media only screen and (min-width: 1025px) {
+  .project-modal-container .project-modal {
+    -ms-grid-columns: auto 350px;
+        grid-template-columns: auto 350px;
+    max-width: 840px;
+    max-height: 600px;
   }
 }
 /*# sourceMappingURL=ProjectModal.css.map */
