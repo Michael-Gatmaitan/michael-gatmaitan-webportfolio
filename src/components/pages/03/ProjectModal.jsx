@@ -6,7 +6,7 @@ const ProjectModal = props => {
     showProjectModal,
     setShowProjectModal,
 
-    projectData,
+    // projectData,
     // setProjectData
   } = props;
 
@@ -32,12 +32,25 @@ const ProjectModal = props => {
       </div>
 
       <div className="project-modal" onClick={ propagationStopper }>
+
         <div className="project-info">
-          <div className="project-info-header"></div>
-          <div className="project-info-gallery"></div>
+          <div className="project-info-header">
+            <div className="project-logo">
+              <img src="" alt="" />
+            </div>
+            <div className="project-title">
+              <div className="project-name">Name</div>
+              <div className="project-type">Type</div>
+            </div>
+          </div>
+
+          <div className="project-info-gallery">
+
+          </div>
+
           <div className="project-info-footer">
             <button>Open Website</button>
-            <button>Guthub repo</button>
+            <button>Github repo</button>
           </div>
         </div>
 
@@ -45,11 +58,7 @@ const ProjectModal = props => {
       </div>
 
       <div className="next-container">
-        <div className="next" onClick={e => {
-          propagationStopper(e);
-
-
-        }}>
+        <div className="next" onClick={ propagationStopper }>
           <img src="./svg/body-icons/next.svg" alt="" />
         </div>
       </div>

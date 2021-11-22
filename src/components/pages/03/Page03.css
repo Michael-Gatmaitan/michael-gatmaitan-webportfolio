@@ -28,6 +28,7 @@
 }
 
 .page-03 .card-container .project-card {
+  cursor: pointer;
   border-radius: 12px;
   position: relative;
   overflow: hidden;
