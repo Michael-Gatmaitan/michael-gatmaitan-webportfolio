@@ -83,7 +83,7 @@ const Page03 = props => {
         ))}
       </div>
 
-      <PageNumber pageNumber={"03"} />  
+      <PageNumber pageNumber={"03"} />
     </div>
   )
 }

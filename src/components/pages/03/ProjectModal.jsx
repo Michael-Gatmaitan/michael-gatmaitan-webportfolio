@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import './ProjectModal.css';
 
 const ProjectModal = props => {
@@ -6,9 +7,20 @@ const ProjectModal = props => {
     showProjectModal,
     setShowProjectModal,
 
-    // projectData,
+    projectData,
     // setProjectData
   } = props;
+
+  const {
+    bgHexColor,
+    title,
+    typeOfWeb,
+    imgSrc
+  } = projectData;
+
+  useEffect(() => {
+    console.log(projectData);
+  }, [projectData]);
 
   const modalStyle = {
     pointerEvents: showProjectModal ? 'auto' : 'none',
@@ -35,18 +47,28 @@ const ProjectModal = props => {
 
         <div className="project-info">
           <div className="project-info-header">
-            <div className="project-logo">
-              <img src="" alt="" />
+            <div className="project-logo" style={{ backgroundColor: bgHexColor }}>
+              <img src={`./images/project-logos/${imgSrc}.png`} alt="" />
             </div>
             <div className="project-title">
-              <div className="project-name">Name</div>
-              <div className="project-type">Type</div>
+              <div className="project-name">{title}</div>
+              <div className="project-type">{typeOfWeb}</div>
             </div>
           </div>
 
-          <div className="project-info-gallery">
+          {/*  */}
 
+          <div className="project-info-gallery">
+            <div className="gallery-container">
+
+              <div className="gallery-card">
+                <img src="./images/project-gallery/omo-music-gallery/omo-music-snip-7.jpg" alt="" />
+              </div>
+
+            </div>
           </div>
+
+          {/*  */}
 
           <div className="project-info-footer">
             <button>Open Website</button>
