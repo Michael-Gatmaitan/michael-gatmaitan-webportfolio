@@ -1,7 +1,21 @@
-
 import './styles/Nav.css';
+import { motion } from 'framer-motion';
 
 const Nav = () => {
+
+  const bttnAnimationProps = {
+    hover: {
+      backgroundColor: "#f00"
+    },
+
+    transition: {
+      default: {
+        duration: 0.5,
+        ease: [1, 2, 2, 1]
+      }
+    }
+  }
+
   return (
     <nav>
       <div className="nav-wrapper">
@@ -12,8 +26,7 @@ const Nav = () => {
           </div>
 
           <div className="logo-name">
-            MICHAEL<br />
-            GATMAITAN
+            MICHAEL<br />GATMAITAN
           </div>
 
         </div>
@@ -24,9 +37,18 @@ const Nav = () => {
 
         {/* VISIBLE on Tablet & Desktop mode only */}
         <div className="button-container">
-          <button>ABOUT</button>
-          <button>WORKS</button>
-          <button>CONTACT</button>
+          <motion.button
+            whileHover={bttnAnimationProps.hover}
+            animate={bttnAnimationProps.transition}
+          >ABOUT</motion.button>
+          <motion.button
+            whileHover={bttnAnimationProps.hover}
+            transition={bttnAnimationProps.transition}
+          >WORKS</motion.button>
+          <motion.button
+            whileHover={bttnAnimationProps.hover}
+            transition={bttnAnimationProps.transition}
+          >CONTACT</motion.button>
         </div>
         
       </div>

@@ -27,7 +27,6 @@ const ProjectModal = props => {
     opacity: showProjectModal ? 1 : 0
   };
 
-  const propagationStopper = e => e.stopPropagation();
 
   return (
     <div className="project-modal-container"
@@ -35,15 +34,8 @@ const ProjectModal = props => {
       style={modalStyle}
       onClick={() => setShowProjectModal(false)}
     >
-      <div className="prev-container">
-        <div className="prev" onClick={e => {
-          propagationStopper(e);
-        }}>
-          <img src="./svg/body-icons/prev.svg" alt="" />
-        </div>
-      </div>
 
-      <div className="project-modal" onClick={ propagationStopper }>
+      <div className="project-modal">
 
         <div className="project-info">
           <div className="project-info-header">
@@ -79,11 +71,6 @@ const ProjectModal = props => {
         <div className="project-description"></div>
       </div>
 
-      <div className="next-container">
-        <div className="next" onClick={ propagationStopper }>
-          <img src="./svg/body-icons/next.svg" alt="" />
-        </div>
-      </div>
     </div>
   )
 }

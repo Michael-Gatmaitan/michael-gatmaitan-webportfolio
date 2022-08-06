@@ -18,39 +18,6 @@
   transition: 0.07s ease-in;
 }
 
-.project-modal-container .prev-container {
-  margin-right: 30px;
-}
-
-.project-modal-container .next-container {
-  margin-left: 30px;
-}
-
-.project-modal-container .prev-container, .project-modal-container .next-container {
-  height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  place-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  display: none;
-}
-
-@media only screen and (min-width: 768px) {
-  .project-modal-container .prev-container, .project-modal-container .next-container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-}
-
-.project-modal-container .prev-container div, .project-modal-container .next-container div {
-  width: 100%;
-  padding: 12px;
-}
-
 .project-modal-container .project-modal {
   width: 100%;
   height: 100%;

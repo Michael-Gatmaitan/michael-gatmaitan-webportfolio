@@ -6,7 +6,6 @@ import './components/styles/FloatingLogoQueries.css';
 
 // Components
 import Nav from './components/Nav';
-import FloatingLogo from './components/_FloatingLogo';
 import SocMedIcons from './components/SocMedIcons';
 import ModalToolsMobile from './components/ModalToolsMobile';
 import ProjectModal from './components/pages/03/ProjectModal';
@@ -20,19 +19,13 @@ function App() {
   
   let [showModal, setShowModal] = useState(false);
 
+  // Project's Modal states
   let [showProjectModal, setShowProjectModal] = useState(false);
-
   let [projectData, setProjectData] = useState({});
 
   return (
     <>
       {/* <Root> */}
-
-      <div className="floating-logo-holder">
-        <FloatingLogo posStyles={{ top: -170, left: -22 }} elId={0} />
-        <FloatingLogo posStyles={{ top: 617, right: -22 }} elId={1} />
-        <FloatingLogo posStyles={{ top: 617 + 597, left: -22 }} elId={2} />
-      </div>
 
       <Nav />
       <SocMedIcons />

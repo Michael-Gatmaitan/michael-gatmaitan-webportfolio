@@ -6,6 +6,7 @@
   left: 0;
   pointer-events: none;
   z-index: 30;
+  opacity: 0.5;
     
   .page-number {
     @include fontProp('Montserrat', 800, 94px, #5e5e5e);

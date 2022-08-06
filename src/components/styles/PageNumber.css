@@ -4,6 +4,7 @@
   left: 0;
   pointer-events: none;
   z-index: 30;
+  opacity: 0.5;
 }
 
 .page-number-container .page-number {
