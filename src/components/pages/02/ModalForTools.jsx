@@ -20,7 +20,7 @@ const ModalForTools = ({ setShowModal }) => {
         <div className="tools-header-container">
           <div className="tools-header">Tools I use</div>
           <div className="close-tools" onClick={ () => setShowModal(false) }>
-            <img src="./svg/body-icons/close-tools.svg" alt="" />
+            <img src="./svg/body-icons/close_black.svg" alt="" />
           </div>
         </div>
 

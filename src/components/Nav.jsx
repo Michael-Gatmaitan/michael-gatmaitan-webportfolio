@@ -5,7 +5,12 @@ const Nav = () => {
 
   const bttnAnimationProps = {
     hover: {
-      backgroundColor: "#f00"
+      backgroundColor: "#fff",
+      color: "#000",
+      
+      default: {
+        duration: 0.2
+      }
     },
 
     transition: {

@@ -97,6 +97,7 @@ nav .nav-wrapper .button-container button {
   font-weight: 500;
   font-size: 14px;
   color: #fff;
+  border-radius: 4px;
   cursor: pointer;
 }
 

@@ -10,8 +10,17 @@
 .page-number-container .page-number {
   font-family: "Montserrat", sans-serif;
   font-weight: 800;
-  font-size: 94px;
+  font-size: 48px;
   color: #5e5e5e;
+}
+
+@media only screen and (min-width: 1025px) {
+  .page-number-container .page-number {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 800;
+    font-size: 94px;
+    color: #5e5e5e;
+  }
 }
 
 .page-number-container .page-underline {

@@ -3,6 +3,20 @@ import './ProjectModal.css';
 
 const ProjectModal = props => {
 
+  /* Data Sample
+    {
+      id: 1,
+      siteLink: "https://omo-music.netlify.app",
+      githubRepoLink: "https://github.com/Michael-Gatmaitan/omo-music",
+      typeOfWeb: "Music Website",
+      bgHexColor: "#0B0B14",
+      title: "OMO Music",
+      imgSrc: "omo",
+      galleryDirectory: "omo-music-gallery",
+      galleryLength: 11
+    },
+  */
+
   const {
     showProjectModal,
     setShowProjectModal,
@@ -12,21 +26,18 @@ const ProjectModal = props => {
   } = props;
 
   const {
-    bgHexColor,
     title,
     typeOfWeb,
-    imgSrc
+    galleryLength,
+    galleryDirectory,
+    siteLink,
+    githubRepoLink
   } = projectData;
-
-  useEffect(() => {
-    console.log(projectData);
-  }, [projectData]);
 
   const modalStyle = {
     pointerEvents: showProjectModal ? 'auto' : 'none',
     opacity: showProjectModal ? 1 : 0
   };
-
 
   return (
     <div className="project-modal-container"
@@ -37,40 +48,37 @@ const ProjectModal = props => {
 
       <div className="project-modal">
 
-        <div className="project-info">
-          <div className="project-info-header">
-            <div className="project-logo" style={{ backgroundColor: bgHexColor }}>
-              <img src={`./images/project-logos/${imgSrc}.png`} alt="" />
-            </div>
-            <div className="project-title">
-              <div className="project-name">{title}</div>
-              <div className="project-type">{typeOfWeb}</div>
-            </div>
+        <div className="modal-mobile-nav">
+          <div />
+    
+          <div className="logo">
+            <img src="./svg/my-logo/mg_logo_white.svg" alt="close_modal" />
           </div>
 
-          {/*  */}
-
-          <div className="project-info-gallery">
-            <div className="gallery-container">
-
-              <div className="gallery-card">
-                <img src="./images/project-gallery/omo-music-gallery/omo-music-snip-7.jpg" alt="" />
-              </div>
-
-            </div>
-          </div>
-
-          {/*  */}
-
-          <div className="project-info-footer">
-            <button>Open Website</button>
-            <button>Github repo</button>
+          <div className="close-project-modal">
+            <img src="./svg/body-icons/close_white.svg" alt="close_modal" />
           </div>
         </div>
 
-        <div className="project-description"></div>
+        <div className="project-gallery">
+          <div className="gallery-slider-container">
+            {galleryLength}
+            {Array(galleryLength).fill().map(
+              (_, i) => <ProjectGallerySlides key={i} imageIndex={i+1} />)}
+          </div>
+        </div>
+
       </div>
 
+    </div>
+  )
+}
+
+const ProjectGallerySlides = ({ imageIndex }) => {
+
+  return (
+    <div className="slide-container">
+      {imageIndex}
     </div>
   )
 }

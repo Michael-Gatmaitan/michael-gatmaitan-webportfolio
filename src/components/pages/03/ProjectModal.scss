@@ -7,128 +7,43 @@
   top: 0;
   left: 0;
   background-color: rgba(#000, 0.6);
-  padding: 24px;
   z-index: 60;
-  @include flexCenter;
   transition: 0.07s ease-in;
-
-  // state display
-  // pointer-events: none;
-  // opacity: 0;
 
   .project-modal {
     width: 100%;
     height: 100%;
-    background-color: $white;
-    display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: auto;
-    grid-gap: 14px;
-    overflow: hidden;
-    border-radius: 12px;
-    padding: 12px;
-    
-    .project-info {
-      display: grid;
-      grid-template-rows: 80px 1fr auto;
-      gap: 12px;
+    background-color: #f00;
 
-      .project-info-header {
-        display: flex;
-        gap: 8px;
+    .modal-mobile-nav {
+      padding: 32px 24px 24px 24px;
+      width: 100%;
+      background-color: #00f;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      
+      div:nth-of-type(1) {
+        width: 25px;
+        height: 25px;
+      }
 
-        .project-logo {
-          width: 80px;
-          height: 80px;
-          border-radius: 12px;
-          overflow: hidden;
-          padding: 8px;
-          @include flexCenter;
-
-          img {
-            width: 100%;
-          }
-        }
-
-        .project-title {
-          .project-name {
-            margin-top: 8px;
-            @include fontProp('Montserrat', 600, 32px, #000);
-          }
-          .project-type {
-            @include fontProp('Montserrat', 500, 14px, #000);
-          }
-        }
-        
-        @include tablet {
-
-          .project-logo {
-            width: 100px;
-            height: 100px;
-          }
-
-          .project-title {
-            .project-name {
-              font-size: 34px !important;
-            }
-            .project-type {
-              font-size: 18px !important;
-            }
-          }
+      .logo {
+        img {
+          height: 44px;
         }
       }
 
-      .project-info-gallery {
-        overflow: scroll;
-        
-        .gallery-container {
-          display: flex;
+      // .close-project-modal {
+      // }
 
-          .gallery-card {
-            flex-grow: 1;
-            background-color: #f00;
-          }
-        }
-
+      @include desktop {
+        display: none;
       }
-
-      .project-info-footer {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-gap: 8px;
-        justify-content: space-between;
-
-        button {
-          background-color: #121212;
-          padding: 12px 0;
-          border-radius: 4px;
-          border: solid 5px #121212;
-          @include fontProp('Montserrat', 500, 14px, #fff);
-        }
-
-        button:nth-of-type(2) {
-          background-color: transparent;
-          color: #000 !important;
-        }
-      }
-
-      @include tablet {
-        grid-template-rows: 100px 1fr auto;
-      }
-    }
-    
-    @include tablet {
-      max-width: 680px;
-      grid-template-columns: auto 300px;
-      grid-template-rows: auto;
-      max-height: 490px;
-      padding: 24px;
-    }
-    
-    @include desktop {
-      grid-template-columns: auto 350px;
-      max-width: 840px;
-      max-height: 600px;
     }
   }
+
+  // state display
+  // pointer-events: none;
+  // opacity: 0;
 }
