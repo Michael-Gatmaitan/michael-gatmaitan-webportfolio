@@ -29,56 +29,66 @@ function App() {
       id: 0,
       siteLink: "https://mchlgtmtn-posty.netlify.app/",
       githubRepoLink: "https://github.com/Michael-Gatmaitan/music-player-posty",
-      typeOfWeb: "Music Website",
       bgHexColor: "#2F2F2F",
+      description: "",
+      typeOfWeb: "Music Website",
       title: "Posty",
       imgSrc: "posty",
       galleryDirectory: "posty-gallery",
-      galleryLength: 5
+      imageName: "posty-snip-",
+      gallerySnips: 5
     },
     {
       id: 1,
       siteLink: "https://omo-music.netlify.app",
       githubRepoLink: "https://github.com/Michael-Gatmaitan/omo-music",
-      typeOfWeb: "Music Website",
       bgHexColor: "#0B0B14",
+      description: "OMO Music is a music website where you can play some songs of international artists. Enjoy over 500+ songs and 50+ artists.",
+      typeOfWeb: "Music Website",
       title: "OMO Music",
       imgSrc: "omo",
       galleryDirectory: "omo-music-gallery",
-      galleryLength: 11
+      imageName: "omo-music-snip-",
+      gallerySnips: 11
     },
     {
       id: 2,
       siteLink: "https://aileen-molina-18.netlify.app/",
       githubRepoLink: "https://github.com/Michael-Gatmaitan/Aileen-18th",
-      typeOfWeb: "Birthday celebration website",
       bgHexColor: "#FCCAC5",
+      description: "",
+      typeOfWeb: "Birthday celebration website",
       title: "Birthday Website",
       imgSrc: "",
       galleryDirectory: "birthday-website-gallery",
-      galleryLength: 8
+      imageName: "birthday-website-snip-",
+      gallerySnips: 8
     },
     {
       id: 3,
       siteLink: "https://indicies.netlify.app/",
       githubRepoLink: "https://github.com/Michael-Gatmaitan/Indicies",
-      typeOfWeb: "Website Template",
       bgHexColor: "#F7ECEE",
+      description: "",
+      typeOfWeb: "Website Template",
       title: "Indicies",
       imgSrc: "indicies",
       galleryDirectory: "indicies-gallery",
-      galleryLength: 4
+      imageName: "indicies-snip-",
+      gallerySnips: 4
     },
     {
       id: 4,
       siteLink: "https://swarsplanets.netlify.app/",
       githubRepoLink: "https://github.com/Michael-Gatmaitan/starwars_react-query",
-      typeOfWeb: "Data-fetching Website",
       bgHexColor: "#121212",
+      description: "",
+      typeOfWeb: "Data-fetching Website",
       title: "Star Wars' Planets",
       imgSrc: "starwars",
-      galleryDirectory: "starwars-gallery",
-      galleryLength: 0
+      galleryDirectory: "star-wars-planets-gallery",
+      imageName: "star-wars-planets-snip-",
+      gallerySnips: 4
     }
   ];
 

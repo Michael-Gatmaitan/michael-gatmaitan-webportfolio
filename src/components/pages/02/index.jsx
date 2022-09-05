@@ -7,12 +7,12 @@ import ModalForTools from './ModalForTools.jsx';
 const Page02 = ({ setShowModal }) => {
 
   const statBarsData =[
-    { language: "HTML", percentage: 90, key: 0 },
-    { language: "CSS", percentage: 80, key: 1 },
-    { language: "SASS", percentage: 75, key: 2 },
-    { language: "JS", percentage: 85, key: 3 },
-    { language: "React", percentage: 85, key: 4 },
-    { language: "TS", percentage: 60, key: 5 },
+    { language: "HTML", percentage: 90 },
+    { language: "CSS", percentage: 80 },
+    { language: "SASS", percentage: 75 },
+    { language: "JS", percentage: 85 },
+    { language: "React", percentage: 85 },
+    { language: "TS", percentage: 60 },
   ]
 
   return (
@@ -35,11 +35,11 @@ const Page02 = ({ setShowModal }) => {
 
         <div className="stats-container">
 
-          {statBarsData.map(statData => (
+          {statBarsData.map((statData, i) => (
             <StatBar
               languageLabel={statData.language}
               percentage={statData.percentage}
-              key={statData.key}
+              key={i}
             />
           ))}
 
@@ -68,21 +68,18 @@ const Page02 = ({ setShowModal }) => {
   )
 }
 
-const StatBar = ({ languageLabel, percentage }) => {
+const StatBar = ({ languageLabel, percentage }) => (
+  <div className="stat-bar">
+    <div className="percentage-container">
 
-  return (
-    <div className="stat-bar">
-      <div className="percentage-container">
-
-        <div className="percentage-wrapper">
-          <div className="percentage-value" style={{ width: `${percentage}%`}} />
-        </div>
-
+      <div className="percentage-wrapper">
+        <div className="percentage-value" style={{ width: `${percentage}%`}} />
       </div>
-      
-      <div className="language-label">{languageLabel}</div>
+
     </div>
-  )
-}
+    
+    <div className="language-label">{languageLabel}</div>
+  </div>
+);
 
 export default Page02;

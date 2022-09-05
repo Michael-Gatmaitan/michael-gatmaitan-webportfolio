@@ -1,6 +1,6 @@
 .project-modal-container {
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   position: fixed;
   top: 0;
   left: 0;
@@ -13,13 +13,14 @@
 .project-modal-container .project-modal {
   width: 100%;
   height: 100%;
-  background-color: #f00;
+  max-height: 100%;
+  background-color: #121212;
+  overflow-y: scroll;
 }
 
 .project-modal-container .project-modal .modal-mobile-nav {
-  padding: 32px 24px 0 24px;
+  padding: 32px 24px 24px 24px;
   width: 100%;
-  background-color: #00f;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -29,20 +30,17 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  left: 0;
+  background: -webkit-gradient(linear, left top, left bottom, from(#121212), to(rgba(18, 18, 18, 0)));
+  background: linear-gradient(#121212, rgba(18, 18, 18, 0));
 }
 
 .project-modal-container .project-modal .modal-mobile-nav div:nth-of-type(1) {
   width: 25px;
   height: 25px;
-  background-color: #f00;
-}
-
-.project-modal-container .project-modal .modal-mobile-nav .logo {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-item-align: center;
-      align-self: center;
 }
 
 .project-modal-container .project-modal .modal-mobile-nav .logo img {
@@ -53,5 +51,108 @@
   .project-modal-container .project-modal .modal-mobile-nav {
     display: none;
   }
+}
+
+.project-modal-container .project-modal .project-modal-contents .project-gallery {
+  padding: 0 24px;
+}
+
+.project-modal-container .project-modal .project-modal-contents .project-gallery .gallery-slider-container {
+  overflow-x: scroll;
+  gap: 12px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 12px;
+}
+
+.project-modal-container .project-modal .project-modal-contents .project-gallery .gallery-slider-container .slider-container img {
+  display: block;
+  max-height: 240px;
+  border-radius: 8px;
+}
+
+.project-modal-container .project-modal .project-modal-contents .project-gallery .gallery-scroll-indicator {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 12px 0;
+  display: flex;
+  place-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.project-modal-container .project-modal .project-modal-contents .project-gallery .gallery-scroll-indicator .indicator {
+  width: 200px;
+  height: 4px;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.project-modal-container .project-modal .project-modal-contents .project-gallery .gallery-scroll-indicator .indicator .bar {
+  width: 20px;
+  height: 100%;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.project-modal-container .project-modal .project-modal-contents .project-info {
+  margin-top: 18px;
+  padding: 0 24px;
+}
+
+.project-modal-container .project-modal .project-modal-contents .project-info .project-title {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 32px;
+  color: #fff;
+}
+
+.project-modal-container .project-modal .project-modal-contents .project-info .project-type {
+  padding-top: 8px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.project-modal-container .project-modal .project-modal-contents .project-info .project-description {
+  padding-top: 16px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: #fff;
+}
+
+.project-modal-container .project-modal .project-modal-contents .project-info .button-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 24px;
+  gap: 8px;
+}
+
+.project-modal-container .project-modal .project-modal-contents .project-info .button-container a button {
+  padding: 12px 28px;
+  border-radius: 4px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  color: #000;
+}
+
+.project-modal-container .project-modal .project-modal-contents .project-info .button-container a .to-site {
+  color: #000 !important;
+  background-color: #F6F6F6;
+}
+
+.project-modal-container .project-modal .project-modal-contents .project-info .button-container a .to-repo {
+  color: #fff !important;
+  background-color: #121212;
+  padding: 9px 25px;
+  border: solid 3px #fff;
 }
 /*# sourceMappingURL=ProjectModal.css.map */

@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import React, { useRef } from 'react';
 import './ProjectModal.css';
 
 const ProjectModal = props => {
@@ -11,9 +11,9 @@ const ProjectModal = props => {
       typeOfWeb: "Music Website",
       bgHexColor: "#0B0B14",
       title: "OMO Music",
-      imgSrc: "omo",
       galleryDirectory: "omo-music-gallery",
-      galleryLength: 11
+      imageName: "omo-music-snip-",
+      gallerySnips: 11
     },
   */
 
@@ -28,8 +28,10 @@ const ProjectModal = props => {
   const {
     title,
     typeOfWeb,
-    galleryLength,
+    gallerySnips,
     galleryDirectory,
+    imageName,
+    description,
     siteLink,
     githubRepoLink
   } = projectData;
@@ -39,33 +41,85 @@ const ProjectModal = props => {
     opacity: showProjectModal ? 1 : 0
   };
 
-  return (
-    <div className="project-modal-container"
-    // @ts-ignore
-      style={modalStyle}
-      onClick={() => setShowProjectModal(false)}
-    >
+  // Initializing DOM element handler
+  let projectModal = useRef(null);
+  let gallerySlider = useRef(null);
+  const closeModal = () => {
+    setShowProjectModal(false);
 
-      <div className="project-modal">
+    // Resetting Scroll have made by user
+    projectModal.current.scrollTo(0, 0);
+    gallerySlider.current.scrollTo(0, 0);
+  }
+
+  let totalScrollWidth;
+  let viewableWidth;
+  let barWidth;
+  let scrollIndicator = useRef(null);
+  const modalOnScroll = e => {
+    totalScrollWidth = e.currentTarget.scrollWidth;
+    viewableWidth = e.currentTarget.offsetWidth;
+    barWidth = (e.currentTarget.scrollLeft / (totalScrollWidth - viewableWidth)) * 100;
+
+    console.log(e.currentTarget.scrollWidth);
+    scrollIndicator.current.style.width = `${barWidth}%`; 
+
+    console.log(barWidth);
+  }
+
+  return (
+    <div className="project-modal-container" style={modalStyle}>
+
+      <div className="project-modal" ref={projectModal}>
 
         <div className="modal-mobile-nav">
           <div />
-    
+
           <div className="logo">
             <img src="./svg/my-logo/mg_logo_white.svg" alt="close_modal" />
           </div>
 
-          <div className="close-project-modal">
+          <div className="close-project-modal" onClick={() => closeModal()}>
             <img src="./svg/body-icons/close_white.svg" alt="close_modal" />
           </div>
         </div>
 
-        <div className="project-gallery">
-          <div className="gallery-slider-container">
-            {galleryLength}
-            {Array(galleryLength).fill().map(
-              (_, i) => <ProjectGallerySlides key={i} imageIndex={i+1} />)}
+        <div className="project-modal-contents">
+
+          {/* Project Gallery */}
+          <div className="project-gallery">
+            <div className="gallery-slider-container" ref={gallerySlider} onScroll={modalOnScroll}>
+              <GallerySliderContainer
+                gallerySnips={gallerySnips}
+                galleryDirectory={galleryDirectory}
+                imageName={imageName}
+              />
+            </div>
+
+            <div className="gallery-scroll-indicator">
+              <div className="indicator">
+                <div className="bar" ref={scrollIndicator}/>
+              </div>
+            </div>
           </div>
+
+          {/* Project Info */}
+          <div className="project-info">
+            <div className="project-title">{title}</div>
+            <div className="project-type">{typeOfWeb}</div>
+            <div className="project-description">{description}</div>
+
+            <div className="button-container">
+              <a href={siteLink} target="_blank" rel="noreferrer">
+                <button className="to-site">View site</button>
+              </a>
+              <a href={githubRepoLink} target="_blank" rel="noreferrer">
+                <button className="to-repo">GitHub Repo</button>
+              </a>
+            </div>
+          </div>
+
+
         </div>
 
       </div>
@@ -74,12 +128,23 @@ const ProjectModal = props => {
   )
 }
 
-const ProjectGallerySlides = ({ imageIndex }) => {
+const GallerySliderContainer = props => {
+  const {
+    gallerySnips,
+    galleryDirectory,
+    imageName
+    // title
+  } = props;
+  // const imageSrc = `./images/project-gallery/${galleryDirectory}/${title.toLowerCase().replaceAll(" ", "-")}-snip-${imageIndex}.png`;
 
   return (
-    <div className="slide-container">
-      {imageIndex}
-    </div>
+    <React.Fragment>
+      {Array(gallerySnips).fill(0).map((e, i) => (
+        <div className="slider-container" key={i}>
+          <img src={`./images/project-gallery/${galleryDirectory}/${imageName}${i + 1}.jpg`} alt="project_image" />
+        </div>
+      ))}
+    </React.Fragment>
   )
 }
 

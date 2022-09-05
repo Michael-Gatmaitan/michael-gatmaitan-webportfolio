@@ -19,11 +19,8 @@ body {
   }
 }
 
-* {
+*, input, button{
   box-sizing: border-box;
-}
-
-input, button {
   outline: none;
   border: none;
 }

@@ -1,8 +1,8 @@
 @import '../../../mixins.scss';
 
 .project-modal-container {
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   position: fixed;
   top: 0;
   left: 0;
@@ -13,15 +13,20 @@
   .project-modal {
     width: 100%;
     height: 100%;
-    background-color: #f00;
+    max-height: 100%;
+    background-color: $primary-black;
+    overflow-y: scroll;
 
     .modal-mobile-nav {
       padding: 32px 24px 24px 24px;
       width: 100%;
-      background-color: #00f;
       display: flex;
       align-items: center;
       justify-content: space-between;
+      position: sticky;
+      top: 0;
+      left: 0;
+      background: linear-gradient(rgba($primary-black, 1), rgba($primary-black, 0));
       
       div:nth-of-type(1) {
         width: 25px;
@@ -34,11 +39,98 @@
         }
       }
 
-      // .close-project-modal {
-      // }
+      // .close-project-modal { _ }
 
       @include desktop {
         display: none;
+      }
+    }
+
+    .project-modal-contents {
+
+      .project-gallery {
+        padding: 0 24px;
+
+        .gallery-slider-container {
+          overflow-x: scroll;
+          gap: 12px;
+          display: flex;
+          border-radius: 12px;
+          
+          .slider-container {
+            img {
+              display: block;
+              max-height: 240px;
+              border-radius: 8px;
+            }
+          }
+        }
+        
+        .gallery-scroll-indicator {
+          width: 100%;
+          display: flex;
+          padding: 12px 0;
+          @include flexCenter;
+
+          .indicator {
+            width: 200px;
+            height: 4px;
+            border-radius: 10px;
+            background-color: rgba(#fff, 0.3);
+
+            .bar {
+              width: 20px;
+              height: 100%;
+              border-radius: 10px;
+              background-color: rgba(#fff, 0.8);
+            }
+          }
+        }
+      }
+
+      .project-info {
+        margin-top: 18px;
+        padding: 0 24px;
+
+        .project-title {
+          @include fontProp("Montserrat", 700, 32px, #fff);
+        }
+        .project-type {
+          padding-top: 8px;
+          @include fontProp("Montserrat", 500, 18px, rgba(#fff, 0.7));
+        }
+        .project-description {
+          padding-top: 16px;
+          @include fontProp("Montserrat", 400, 16px, #fff);
+        }
+
+        .button-container {
+          display: flex;
+          margin-top: 24px;
+          gap: 8px;
+
+          a {
+            cursor: pointer;
+            
+            button {
+              padding: 12px 28px;
+              border-radius: 4px;
+              @include fontProp("Montserrat", 500, 14px);
+            }
+
+            .to-site {
+              color: #000 !important;
+              background-color: $white;
+            }
+
+            .to-repo {
+              color: #fff !important;
+              background-color: $primary-black;
+              padding: 9px 25px;
+              border: solid 3px #fff;
+            }
+          }
+        }
       }
     }
   }
