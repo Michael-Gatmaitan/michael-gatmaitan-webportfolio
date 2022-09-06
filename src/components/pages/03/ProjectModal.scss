@@ -9,6 +9,8 @@
   background-color: rgba(#000, 0.6);
   z-index: 60;
   transition: 0.07s ease-in;
+  display: flex;
+  @include flexCenter;
 
   .project-modal {
     width: 100%;
@@ -39,7 +41,11 @@
         }
       }
 
-      // .close-project-modal { _ }
+      .close-project-modal {
+        img {
+          pointer-events: none;
+        }
+      }
 
       @include desktop {
         display: none;
@@ -69,7 +75,7 @@
         .gallery-scroll-indicator {
           width: 100%;
           display: flex;
-          padding: 12px 0;
+          padding: 12px 0 0 0;
           @include flexCenter;
 
           .indicator {
@@ -79,7 +85,7 @@
             background-color: rgba(#fff, 0.3);
 
             .bar {
-              width: 20px;
+              width: 0;
               height: 100%;
               border-radius: 10px;
               background-color: rgba(#fff, 0.8);
@@ -104,34 +110,124 @@
           @include fontProp("Montserrat", 400, 16px, #fff);
         }
 
+      }
+
+      .bottom-buttons {
+        margin: 24px 0 18px 0;
+        padding: 0 24px;
+        display: flex;
+        justify-content: space-between;
+
         .button-container {
           display: flex;
-          margin-top: 24px;
           gap: 8px;
-
+  
           a {
-            cursor: pointer;
             
             button {
+              cursor: pointer;
               padding: 12px 28px;
               border-radius: 4px;
+              height: 100%;
               @include fontProp("Montserrat", 500, 14px);
             }
-
+  
             .to-site {
               color: #000 !important;
               background-color: $white;
             }
-
+  
             .to-repo {
               color: #fff !important;
               background-color: $primary-black;
-              padding: 9px 25px;
               border: solid 3px #fff;
             }
           }
+  
+        }
+
+        .close-project-modal {
+          display: none;
+          align-self: center;
+  
+          img {
+            pointer-events: none;
+          }
         }
       }
+
+    }
+
+
+    // QUERIES
+
+
+    @include tablet {
+      width: 650px;
+      height: auto;
+      border-radius: 12px;
+      max-height: calc(100% - (50px * 2));
+
+      .modal-mobile-nav {
+        display: none;
+      }
+
+      .project-modal-contents {
+
+        .project-gallery {
+          padding: 0;
+  
+          .gallery-slider-container {
+            border-radius: 12px 12px 0 0;
+            
+            .slider-container {
+              img {
+                max-height: 340px;
+              }
+            }
+          }
+        }
+  
+        .project-info {
+          margin-top: 18px;
+          padding: 0 18px;
+  
+          .project-title {
+            font-size: 36px !important;
+          }
+          .project-type {
+            @include fontProp("Montserrat", 500, 18px, rgba(#fff, 0.7));
+            font-size: 20px !important;
+          }
+          .project-description {
+            font-size: 18px !important;
+          }
+  
+        }
+
+
+        .bottom-buttons {
+          padding: 0 18px;
+
+          .button-container {
+            gap: 12px;
+
+            a {
+              
+              button {
+                padding: 17px 34px;
+                
+              }
+            }
+
+          }
+          .close-project-modal {
+            padding-right: 10px;
+            display: block;
+          }
+        }
+      }
+      ////
     }
   }
 

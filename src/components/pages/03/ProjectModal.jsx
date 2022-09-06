@@ -44,7 +44,12 @@ const ProjectModal = props => {
   // Initializing DOM element handler
   let projectModal = useRef(null);
   let gallerySlider = useRef(null);
-  const closeModal = () => {
+  const closeModal = e => {
+    let targetClass = e.target.className;
+    console.log(targetClass);
+    if (!(targetClass === "project-modal-container" ||
+        targetClass === "close-project-modal")) return
+
     setShowProjectModal(false);
 
     // Resetting Scroll have made by user
@@ -68,7 +73,7 @@ const ProjectModal = props => {
   }
 
   return (
-    <div className="project-modal-container" style={modalStyle}>
+    <div className="project-modal-container" style={modalStyle} onClick={closeModal}>
 
       <div className="project-modal" ref={projectModal}>
 
@@ -79,7 +84,7 @@ const ProjectModal = props => {
             <img src="./svg/my-logo/mg_logo_white.svg" alt="close_modal" />
           </div>
 
-          <div className="close-project-modal" onClick={() => closeModal()}>
+          <div className="close-project-modal">
             <img src="./svg/body-icons/close_white.svg" alt="close_modal" />
           </div>
         </div>
@@ -109,6 +114,10 @@ const ProjectModal = props => {
             <div className="project-type">{typeOfWeb}</div>
             <div className="project-description">{description}</div>
 
+          </div>
+          
+          <div className="bottom-buttons">
+
             <div className="button-container">
               <a href={siteLink} target="_blank" rel="noreferrer">
                 <button className="to-site">View site</button>
@@ -116,6 +125,10 @@ const ProjectModal = props => {
               <a href={githubRepoLink} target="_blank" rel="noreferrer">
                 <button className="to-repo">GitHub Repo</button>
               </a>
+            </div>
+            
+            <div className="close-project-modal">
+              <img src="./svg/body-icons/close_white.svg" alt="close_modal" />
             </div>
           </div>
 
