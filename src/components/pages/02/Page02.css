@@ -26,7 +26,7 @@
 }
 
 .page-02 .stats .stat-des .stat-body-text {
-  font-family: "PT Sans", sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
   font-weight: 400;
   font-size: 16px;
   color: rgba(255, 255, 255, 0.7);
@@ -67,7 +67,7 @@
 }
 
 .page-02 .stats .stats-container .stat-bar .language-label {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Souce Sans Pro", sans-serif;
   font-weight: 500;
   font-size: 14px;
   color: #fff;
@@ -86,7 +86,7 @@
 .page-02 .stats .more-button-container .more-button {
   padding: 8px 27px;
   background-color: #fff;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
   font-weight: 600;
   font-size: 14px #121212;
   color: #000;

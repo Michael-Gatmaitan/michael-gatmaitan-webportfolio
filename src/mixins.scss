@@ -1,6 +1,10 @@
 $primary-black: #121212;
 $white: #F6F6F6;
 
+// Fonts
+$montserrat: "Montserrat";
+$Source-sans-pro: "Source Sans Pro"; 
+
 @mixin tablet {
   @media only screen and (min-width: 768px) {
     @content;

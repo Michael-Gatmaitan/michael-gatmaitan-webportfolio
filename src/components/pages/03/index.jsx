@@ -13,7 +13,7 @@ const Page03 = props => {
   return (
     <div className="page page-03">
 
-      <div className="my-works-header">My Works</div>
+      <div className="my-works-header">My Projects</div>
       <div className="card-container">
         {cardInfos.map((cardInfo, i) => (
           <Card

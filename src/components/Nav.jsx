@@ -49,7 +49,7 @@ const Nav = () => {
           <motion.button
             whileHover={bttnAnimationProps.hover}
             transition={bttnAnimationProps.transition}
-          >WORKS</motion.button>
+          >PROJECTS</motion.button>
           <motion.button
             whileHover={bttnAnimationProps.hover}
             transition={bttnAnimationProps.transition}

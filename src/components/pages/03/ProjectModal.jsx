@@ -22,7 +22,7 @@ const ProjectModal = props => {
     setShowProjectModal,
 
     projectData,
-    // setProjectData
+    setProjectData
   } = props;
 
   const {
@@ -51,6 +51,8 @@ const ProjectModal = props => {
         targetClass === "close-project-modal")) return
 
     setShowProjectModal(false);
+
+    setProjectData([]);
 
     // Resetting Scroll have made by user
     projectModal.current.scrollTo(0, 0);

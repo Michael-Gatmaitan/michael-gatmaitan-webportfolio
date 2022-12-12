@@ -99,15 +99,15 @@
         padding: 0 24px;
 
         .project-title {
-          @include fontProp("Montserrat", 700, 32px, #fff);
+          @include fontProp($montserrat, 700, 32px, #fff);
         }
         .project-type {
           padding-top: 8px;
-          @include fontProp("Montserrat", 500, 18px, rgba(#fff, 0.7));
+          @include fontProp($montserrat, 500, 18px, rgba(#fff, 0.7));
         }
         .project-description {
           padding-top: 16px;
-          @include fontProp("Montserrat", 400, 16px, #fff);
+          @include fontProp($Source-sans-pro, 400, 16px, #fff);
         }
 
       }
@@ -129,7 +129,7 @@
               padding: 12px 28px;
               border-radius: 4px;
               height: 100%;
-              @include fontProp("Montserrat", 500, 14px);
+              @include fontProp($montserrat, 500, 14px);
             }
   
             .to-site {
@@ -196,7 +196,7 @@
             font-size: 36px !important;
           }
           .project-type {
-            @include fontProp("Montserrat", 500, 18px, rgba(#fff, 0.7));
+            @include fontProp($montserrat, 500, 18px, rgba(#fff, 0.7));
             font-size: 20px !important;
           }
           .project-description {
