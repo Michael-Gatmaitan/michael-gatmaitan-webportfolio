@@ -6,26 +6,19 @@
   z-index: 30;
   opacity: 0.5;
 }
-
 .page-number-container .page-number {
   font-family: "Montserrat", sans-serif;
   font-weight: 800;
   font-size: 48px;
   color: #5e5e5e;
 }
-
 @media only screen and (min-width: 1025px) {
   .page-number-container .page-number {
-    font-family: "Montserrat", sans-serif;
-    font-weight: 800;
-    font-size: 94px;
-    color: #5e5e5e;
+    font-size: 94px !important;
   }
 }
-
 .page-number-container .page-underline {
   width: 100%;
   height: 6px;
   background-color: #5e5e5e;
-}
-/*# sourceMappingURL=PageNumber.css.map */
+}/*# sourceMappingURL=PageNumber.css.map */

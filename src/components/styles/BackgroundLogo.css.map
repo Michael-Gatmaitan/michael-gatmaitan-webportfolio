@@ -1,9 +1,1 @@
-{
-    "version": 3,
-    "mappings": "AAAA,AAAA,yBAAyB,CAAC;EACxB,QAAQ,EAAE,QAAQ;EAClB,KAAK,EAAE,IAAI;EACX,MAAM,EAAE,IAAI;EACZ,QAAQ,EAAE,MAAM;EAChB,GAAG,EAAE,CAAC;EACN,IAAI,EAAE,CAAC;CASR;;AAfD,AAQE,yBARuB,CAQvB,KAAK,CAAC;EACJ,KAAK,EAAE,KAAK;EACZ,MAAM,EAAE,KAAK;EAEb,QAAQ,EAAE,QAAQ;EAClB,SAAS,EAAE,qBAAqB;CACjC",
-    "sources": [
-        "BackgroundLogo.scss"
-    ],
-    "names": [],
-    "file": "BackgroundLogo.css"
-}
+{"version":3,"sources":["BackgroundLogo.scss","BackgroundLogo.css"],"names":[],"mappings":"AAAA;EACE,kBAAA;EACA,WAAA;EACA,YAAA;EACA,gBAAA;EACA,MAAA;EACA,OAAA;ACCF;ADCE;EACE,YAAA;EACA,aAAA;EAEA,kBAAA;EACA,gCAAA;ACAJ","file":"BackgroundLogo.css"}

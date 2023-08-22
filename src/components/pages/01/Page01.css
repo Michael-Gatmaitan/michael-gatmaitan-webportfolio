@@ -1,16 +1,9 @@
 .page-01 .page-01-content .creative-developer {
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   place-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  justify-content: center;
+  flex-direction: column;
   text-align: center;
   z-index: 20;
   overflow: hidden;
@@ -18,7 +11,6 @@
   max-width: 536px;
   margin: 0 auto;
 }
-
 .page-01 .page-01-content .creative-developer .creative {
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
@@ -26,7 +18,6 @@
   color: #fff;
   letter-spacing: 3.3px;
 }
-
 .page-01 .page-01-content .creative-developer .developer {
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
@@ -35,7 +26,6 @@
   letter-spacing: 15.6px;
   text-indent: 11px;
 }
-
 .page-01 .page-01-content .creative-developer .fe-dev {
   font-family: "Montserrat", sans-serif;
   font-weight: 300;
@@ -44,24 +34,20 @@
   letter-spacing: 3.4px;
   padding-top: 12px;
 }
-
 .page-01 .page-01-content .overflow-image {
   width: 100%;
   margin: 80px auto 0 auto;
   max-width: 400px;
 }
-
 .page-01 .page-01-content .overflow-image img {
   width: 100%;
 }
-
 @media only screen and (min-width: 768px) {
   .page-01 .page-01-content .creative-developer {
     position: absolute;
     right: 0;
     top: 50%;
-    -webkit-transform: translateY(-50%);
-            transform: translateY(-50%);
+    transform: translateY(-50%);
     width: auto;
   }
   .page-01 .page-01-content .creative-developer div {
@@ -86,15 +72,13 @@
     position: absolute;
     left: 0;
     top: 50%;
-    -webkit-transform: translateY(-50%);
-            transform: translateY(-50%);
+    transform: translateY(-50%);
     max-width: none;
   }
   .page-01 .page-01-content .overflow-image img {
     width: 580px;
   }
 }
-
 @media only screen and (min-width: 1025px) {
   .page-01 .page-01-content .creative-developer {
     right: 50px;
@@ -105,5 +89,4 @@
   .page-01 .page-01-content .overflow-image img {
     width: 680px;
   }
-}
-/*# sourceMappingURL=Page01.css.map */
+}/*# sourceMappingURL=Page01.css.map */

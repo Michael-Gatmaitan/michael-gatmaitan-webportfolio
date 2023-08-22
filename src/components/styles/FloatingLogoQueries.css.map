@@ -1,10 +1,1 @@
-{
-    "version": 3,
-    "mappings": "AAGA,AAAA,cAAc,CAAC;EACb,KAAK,EAAE,KAAK;CASb;;AAVD,AAGE,cAHY,CAGZ,GAAG,CAAC;EACF,KAAK,EAAE,IAAI;CACZ;;ACJD,MAAM,MAAM,MAAM,MAAM,SAAS,EAAE,KAAK;EDD1C,AAAA,cAAc,CAAC;IAQX,KAAK,EAAE,KAAK;GAEf;;;ACTC,MAAM,MAAM,MAAM,MAAM,SAAS,EAAE,KAAK;EDW1C,AAAA,gBAAgB,CAAC;IAEb,GAAG,EAAE,gBAAgB;IACrB,IAAI,EAAE,gBAAgB;GAEzB;;;AChBC,MAAM,MAAM,MAAM,MAAM,SAAS,EAAE,KAAK;EDkB1C,AAAA,gBAAgB,CAAC;IAEb,GAAG,EAAE,gBAAgB;IACrB,KAAK,EAAE,eAAe;GAEzB",
-    "sources": [
-        "FloatingLogoQueries.scss",
-        "../../mixins.scss"
-    ],
-    "names": [],
-    "file": "FloatingLogoQueries.css"
-}
+{"version":3,"sources":["FloatingLogoQueries.scss","FloatingLogoQueries.css","../../mixins.scss"],"names":[],"mappings":"AAGA;EACE,YAAA;ACFF;ADIE;EACE,WAAA;ACFJ;ACGE;EFLF;IAQI,YAAA;ECFF;AACF;;ACFE;EFOF;IAEI,qBAAA;IACA,sBAAA;ECFF;AACF;;ACTE;EFcF;IAEI,qBAAA;IACA,sBAAA;ECFF;AACF","file":"FloatingLogoQueries.css"}

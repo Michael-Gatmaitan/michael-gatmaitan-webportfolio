@@ -1,23 +1,21 @@
-
-import React, { useState } from 'react';
+import React, { useState } from "react";
 // import { motion } from 'framer-motion';
 
-import './components/styles/FloatingLogoQueries.css';
+import "./components/styles/FloatingLogoQueries.css";
 
 // Components
-import Nav from './components/Nav';
-import SocMedIcons from './components/SocMedIcons';
-import ModalToolsMobile from './components/ModalToolsMobile';
-import ProjectModal from './components/pages/03/ProjectModal';
-import BackgroundLogo from './components/BackgroundLogo';
+import Nav from "./components/Nav";
+import SocMedIcons from "./components/SocMedIcons";
+import ModalToolsMobile from "./components/ModalToolsMobile";
+import ProjectModal from "./components/pages/03/ProjectModal";
+import BackgroundLogo from "./components/BackgroundLogo";
 
 // Pages
-import Page01 from './components/pages/01/index';
-import Page02 from './components/pages/02/index';
-import Page03 from './components/pages/03/index';
+import Page01 from "./components/pages/01/index";
+import Page02 from "./components/pages/02/index";
+import Page03 from "./components/pages/03/index";
 
 function App() {
-  
   let [showModal, setShowModal] = useState(false);
 
   // Project's Modal states
@@ -36,20 +34,21 @@ function App() {
       imgSrc: "posty",
       galleryDirectory: "posty-gallery",
       imageName: "posty-snip-",
-      gallerySnips: 5
+      gallerySnips: 5,
     },
     {
       id: 1,
       siteLink: "https://omo-music.netlify.app",
       githubRepoLink: "https://github.com/Michael-Gatmaitan/omo-music",
       bgHexColor: "#0B0B14",
-      description: "OMO Music is a music website where you can play some songs of international artists. Enjoy over 500+ songs and 50+ artists.",
+      description:
+        "OMO Music is a music website where you can play some songs of international artists. Enjoy over 500+ songs and 50+ artists.",
       typeOfWeb: "Music Website",
       title: "OMO Music",
       imgSrc: "omo",
       galleryDirectory: "omo-music-gallery",
       imageName: "omo-music-snip-",
-      gallerySnips: 11
+      gallerySnips: 11,
     },
     {
       id: 2,
@@ -62,7 +61,7 @@ function App() {
       imgSrc: "",
       galleryDirectory: "birthday-website-gallery",
       imageName: "birthday-website-snip-",
-      gallerySnips: 8
+      gallerySnips: 8,
     },
     {
       id: 3,
@@ -75,12 +74,13 @@ function App() {
       imgSrc: "indicies",
       galleryDirectory: "indicies-gallery",
       imageName: "indicies-snip-",
-      gallerySnips: 4
+      gallerySnips: 4,
     },
     {
       id: 4,
       siteLink: "https://swarsplanets.netlify.app/",
-      githubRepoLink: "https://github.com/Michael-Gatmaitan/starwars_react-query",
+      githubRepoLink:
+        "https://github.com/Michael-Gatmaitan/starwars_react-query",
       bgHexColor: "#121212",
       description: "",
       typeOfWeb: "Data-fetching Website",
@@ -88,8 +88,8 @@ function App() {
       imgSrc: "starwars",
       galleryDirectory: "star-wars-planets-gallery",
       imageName: "star-wars-planets-snip-",
-      gallerySnips: 4
-    }
+      gallerySnips: 4,
+    },
   ];
 
   return (
@@ -111,9 +111,8 @@ function App() {
       />
 
       <BackgroundLogo />
-      
-      <div className="page-container">
 
+      <div className='page-container'>
         <Page01 />
         <Page02 setShowModal={setShowModal} />
         <Page03

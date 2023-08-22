@@ -1,9 +1,9 @@
 $primary-black: #121212;
-$white: #F6F6F6;
+$white: #f6f6f6;
 
 // Fonts
 $montserrat: "Montserrat";
-$Source-sans-pro: "Source Sans Pro"; 
+$Source-sans-pro: "Source Sans Pro";
 
 @mixin tablet {
   @media only screen and (min-width: 768px) {
@@ -13,6 +13,12 @@ $Source-sans-pro: "Source Sans Pro";
 
 @mixin desktop {
   @media only screen and (min-width: 1025px) {
+    @content;
+  }
+}
+
+@mixin customMediaQuery($widthSize) {
+  @media only screen and (min-width: $widthSize) {
     @content;
   }
 }

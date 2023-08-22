@@ -1,7 +1,8 @@
-@import './mixins.scss';
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Source+Sans+Pro:wght@400;600;700&display=swap');
+@import "./mixins.scss";
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Source+Sans+Pro:wght@400;600;700&display=swap");
 
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
 }
@@ -17,9 +18,15 @@ body {
   @include desktop {
     padding: 0 50px !important;
   }
+
+  @include customMediaQuery(1800px) {
+    padding: 0 300px !important;
+  }
 }
 
-*, input, button{
+*,
+input,
+button {
   box-sizing: border-box;
   outline: none;
   border: none;
@@ -45,7 +52,6 @@ body {
 ::-webkit-scrollbar {
   display: none;
 }
-
 
 .page {
   padding-top: 110px !important;
