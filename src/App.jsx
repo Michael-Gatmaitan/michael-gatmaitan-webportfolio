@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, Suspense, lazy } from "react";
 // import { motion } from 'framer-motion';
 
 import "./components/styles/FloatingLogoQueries.css";
@@ -6,7 +6,6 @@ import "./components/styles/FloatingLogoQueries.css";
 // Components
 import Nav from "./components/Nav";
 import SocMedIcons from "./components/SocMedIcons";
-import ModalToolsMobile from "./components/ModalToolsMobile";
 import ProjectModal from "./components/pages/03/ProjectModal";
 import BackgroundLogo from "./components/BackgroundLogo";
 
@@ -14,6 +13,13 @@ import BackgroundLogo from "./components/BackgroundLogo";
 import Page01 from "./components/pages/01/index";
 import Page02 from "./components/pages/02/index";
 import Page03 from "./components/pages/03/index";
+
+// Skeletons for code-splitting
+// import { Skeleton } from "./components/skeletons/Skeletons";
+import Loading from "./components/Loading";
+import { Skeleton } from "./components/skeletons/Skeletons";
+
+const ModalToolsMobile = lazy(() => import("./components/ModalToolsMobile"));
 
 function App() {
   let [showModal, setShowModal] = useState(false);
@@ -31,7 +37,7 @@ function App() {
       description: "",
       typeOfWeb: "Music Website",
       title: "Posty",
-      imgSrc: "posty",
+      logoSrc: "posty",
       galleryDirectory: "posty-gallery",
       imageName: "posty-snip-",
       gallerySnips: 5,
@@ -45,7 +51,7 @@ function App() {
         "OMO Music is a music website where you can play some songs of international artists. Enjoy over 500+ songs and 50+ artists.",
       typeOfWeb: "Music Website",
       title: "OMO Music",
-      imgSrc: "omo",
+      logoSrc: "omo",
       galleryDirectory: "omo-music-gallery",
       imageName: "omo-music-snip-",
       gallerySnips: 11,
@@ -58,7 +64,7 @@ function App() {
       description: "",
       typeOfWeb: "Birthday celebration website",
       title: "Birthday Website",
-      imgSrc: "",
+      logoSrc: "", // No logo
       galleryDirectory: "birthday-website-gallery",
       imageName: "birthday-website-snip-",
       gallerySnips: 8,
@@ -71,7 +77,7 @@ function App() {
       description: "",
       typeOfWeb: "Website Template",
       title: "Indicies",
-      imgSrc: "indicies",
+      logoSrc: "indicies",
       galleryDirectory: "indicies-gallery",
       imageName: "indicies-snip-",
       gallerySnips: 4,
@@ -85,10 +91,23 @@ function App() {
       description: "",
       typeOfWeb: "Data-fetching Website",
       title: "Star Wars' Planets",
-      imgSrc: "starwars",
-      galleryDirectory: "star-wars-planets-gallery",
+      logoSrc: "starwars",
+      galleryDirectory: "starwars-planets-gallery",
       imageName: "star-wars-planets-snip-",
       gallerySnips: 4,
+    },
+    {
+      id: 5,
+      siteLink: "https://taskit-mg.netlify.app",
+      githubRepoLink: "https://github.com/Michael-Gatmaitan/Task-it",
+      bgHexColor: "#00f",
+      description: "", // Fill up this field
+      typeOfWeb: "Project manager website",
+      title: "Taskit",
+      logoSrc: "", // FGill uip this field
+      galleryDirectory: "task-it",
+      imageName: "task-it-snip-",
+      gallerySnips: 10,
     },
   ];
 
@@ -98,11 +117,17 @@ function App() {
 
       <Nav />
       <SocMedIcons />
-      <ModalToolsMobile
-        showModal={showModal}
-        setShowModal={setShowModal}
-        modalType={true}
-      />
+
+      {
+        <Suspense fallback={<Loading />}>
+          <ModalToolsMobile
+            showModal={showModal}
+            setShowModal={setShowModal}
+            modalType={true}
+          />
+        </Suspense>
+      }
+
       <ProjectModal
         showProjectModal={showProjectModal}
         setShowProjectModal={setShowProjectModal}
@@ -121,6 +146,9 @@ function App() {
           cardInfos={cardInfos}
         />
       </div>
+
+      {/* Skeleton debug view */}
+      <Skeleton elementClassName='modal-for-tools' />
 
       {/* </Root> */}
     </>

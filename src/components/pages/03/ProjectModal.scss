@@ -1,4 +1,4 @@
-@import '../../../mixins.scss';
+@import "../../../mixins.scss";
 
 .project-modal-container {
   width: 100vw;
@@ -28,8 +28,11 @@
       position: sticky;
       top: 0;
       left: 0;
-      background: linear-gradient(rgba($primary-black, 1), rgba($primary-black, 0));
-      
+      background: linear-gradient(
+        rgba($primary-black, 1),
+        rgba($primary-black, 0)
+      );
+
       div:nth-of-type(1) {
         width: 25px;
         height: 25px;
@@ -53,7 +56,6 @@
     }
 
     .project-modal-contents {
-
       .project-gallery {
         padding: 0 24px;
 
@@ -62,8 +64,10 @@
           gap: 12px;
           display: flex;
           border-radius: 12px;
-          
+
           .slider-container {
+            height: 240px;
+
             img {
               display: block;
               max-height: 240px;
@@ -71,7 +75,7 @@
             }
           }
         }
-        
+
         .gallery-scroll-indicator {
           width: 100%;
           display: flex;
@@ -109,7 +113,6 @@
           padding-top: 16px;
           @include fontProp($Source-sans-pro, 400, 16px, #fff);
         }
-
       }
 
       .bottom-buttons {
@@ -121,9 +124,8 @@
         .button-container {
           display: flex;
           gap: 8px;
-  
+
           a {
-            
             button {
               cursor: pointer;
               padding: 12px 28px;
@@ -131,36 +133,32 @@
               height: 100%;
               @include fontProp($montserrat, 500, 14px);
             }
-  
+
             .to-site {
               color: #000 !important;
               background-color: $white;
             }
-  
+
             .to-repo {
               color: #fff !important;
               background-color: $primary-black;
               border: solid 3px #fff;
             }
           }
-  
         }
 
         .close-project-modal {
           display: none;
           align-self: center;
-  
+
           img {
             pointer-events: none;
           }
         }
       }
-
     }
 
-
     // QUERIES
-
 
     @include tablet {
       width: 650px;
@@ -173,25 +171,26 @@
       }
 
       .project-modal-contents {
-
         .project-gallery {
           padding: 0;
-  
+
           .gallery-slider-container {
             border-radius: 12px 12px 0 0;
-            
+
             .slider-container {
+              height: 340px;
+
               img {
                 max-height: 340px;
               }
             }
           }
         }
-  
+
         .project-info {
           margin-top: 18px;
           padding: 0 18px;
-  
+
           .project-title {
             font-size: 36px !important;
           }
@@ -202,9 +201,7 @@
           .project-description {
             font-size: 18px !important;
           }
-  
         }
-
 
         .bottom-buttons {
           padding: 0 18px;
@@ -213,13 +210,10 @@
             gap: 12px;
 
             a {
-              
               button {
                 padding: 17px 34px;
-                
               }
             }
-
           }
           .close-project-modal {
             padding-right: 10px;

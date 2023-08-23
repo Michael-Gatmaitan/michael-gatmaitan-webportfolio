@@ -6,7 +6,7 @@
 }
 .tools-wrapper .tools {
   padding: 18px;
-  background-color: #F6F6F6;
+  background-color: #f6f6f6;
   border-radius: 12px;
 }
 .tools-wrapper .tools .tools-header-container {
@@ -53,7 +53,7 @@
 .tools-wrapper .see-resume {
   border-radius: 12px;
   padding: 14px 0;
-  background-color: #F6F6F6;
+  background-color: #f6f6f6;
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
   font-size: 16px;

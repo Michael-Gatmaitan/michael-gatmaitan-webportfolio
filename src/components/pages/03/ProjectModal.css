@@ -54,6 +54,9 @@
   display: flex;
   border-radius: 12px;
 }
+.project-modal-container .project-modal .project-modal-contents .project-gallery .gallery-slider-container .slider-container {
+  height: 240px;
+}
 .project-modal-container .project-modal .project-modal-contents .project-gallery .gallery-slider-container .slider-container img {
   display: block;
   max-height: 240px;
@@ -125,7 +128,7 @@
 }
 .project-modal-container .project-modal .project-modal-contents .bottom-buttons .button-container a .to-site {
   color: #000 !important;
-  background-color: #F6F6F6;
+  background-color: #f6f6f6;
 }
 .project-modal-container .project-modal .project-modal-contents .bottom-buttons .button-container a .to-repo {
   color: #fff !important;
@@ -154,6 +157,9 @@
   }
   .project-modal-container .project-modal .project-modal-contents .project-gallery .gallery-slider-container {
     border-radius: 12px 12px 0 0;
+  }
+  .project-modal-container .project-modal .project-modal-contents .project-gallery .gallery-slider-container .slider-container {
+    height: 340px;
   }
   .project-modal-container .project-modal .project-modal-contents .project-gallery .gallery-slider-container .slider-container img {
     max-height: 340px;

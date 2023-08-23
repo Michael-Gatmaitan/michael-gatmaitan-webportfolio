@@ -1,10 +1,9 @@
-@import '../../../mixins.scss';
+@import "../../../mixins.scss";
 
 .page-03 {
-
   .my-works-header {
-    @include fontProp('Montserrat', 700, 32px, #fff);
-    
+    @include fontProp("Montserrat", 700, 32px, #fff);
+
     @include tablet {
       font-size: 36px !important;
     }
@@ -14,63 +13,6 @@
     }
   }
 
-  .card-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-auto-rows: 150px;
-    grid-gap: 12px;
-    margin-top: 12px;
-
-    .project-card {
-      // background-color: $white;
-      cursor: pointer;
-      border-radius: 12px;
-      position: relative;
-      overflow: hidden;
-
-      .dark-bg {
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(rgba(#000, 0), rgba(#000, .8));
-        position: absolute;
-        z-index: 2;
-      }
-
-      .project-title {
-        width: 100%;
-        height: 100%;
-        padding: 12px;
-        display: flex;
-        position: absolute;
-        justify-content: flex-end;
-        flex-direction: column;
-        z-index: 3;
-        @include fontProp('Montserrat', 700, 24px, #fff);
-
-        @include desktop {
-          font-size: 32px;
-        }
-      }
-
-      .project-logo-container {
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        @include flexCenter;
-        
-        img {
-          max-width: 128px;
-        }
-      }
-    }
-
-    @include desktop {
-      grid-template-columns: 1fr 1fr 1fr;
-      grid-auto-rows: 195px;
-      margin-top: 14px !important;
-    }
-  }
-  
   @include desktop {
     padding: 110px 90px 0 90px;
   }
