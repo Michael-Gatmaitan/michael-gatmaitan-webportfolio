@@ -17,7 +17,6 @@ const ProjectModal = (props) => {
   */
 
   const {
-    showProjectModal,
     setShowProjectModal,
 
     projectData,
@@ -34,11 +33,6 @@ const ProjectModal = (props) => {
     siteLink,
     githubRepoLink,
   } = projectData;
-
-  const modalStyle = {
-    pointerEvents: showProjectModal ? "auto" : "none",
-    opacity: showProjectModal ? 1 : 0,
-  };
 
   // Initializing DOM element handler
   let projectModal = useRef(null);
@@ -80,11 +74,7 @@ const ProjectModal = (props) => {
   };
 
   return (
-    <div
-      className='project-modal-container'
-      style={modalStyle}
-      onClick={closeModal}
-    >
+    <div className='project-modal-container' onClick={closeModal}>
       <div className='project-modal' ref={projectModal}>
         <div className='modal-mobile-nav'>
           <div />

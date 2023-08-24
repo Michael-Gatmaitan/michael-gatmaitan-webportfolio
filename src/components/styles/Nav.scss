@@ -1,16 +1,20 @@
-@import '../../mixins.scss';
+@import "../../mixins.scss";
 
 nav {
   position: fixed;
   width: 100%;
-  padding: 28px 24px 0 24px;
+  padding: 14px 24px;
   left: 0;
   z-index: 50;
   background: linear-gradient(rgba(#121212, 1), rgba(#121212, 0));
 
-  @include tablet { padding: 28px 30px 0 30px; }
+  @include tablet {
+    padding: 14px 30px;
+  }
 
-  @include desktop { padding: 28px 50px 0 50px; }
+  @include desktop {
+    padding: 14px 50px;
+  }
 
   .nav-wrapper {
     display: flex;
@@ -63,7 +67,7 @@ nav {
     .button-container {
       display: none;
       gap: 30px;
-      
+
       button {
         padding: 8px;
         background-color: transparent;
@@ -81,5 +85,4 @@ nav {
       }
     }
   }
-
 }

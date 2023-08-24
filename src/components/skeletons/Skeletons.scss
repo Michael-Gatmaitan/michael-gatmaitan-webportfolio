@@ -5,6 +5,16 @@ div[class*="skeleton"] {
   background-color: #888;
 }
 
+// For nav
+.nav-skeleton {
+  width: 100%;
+  height: 76px;
+
+  @include desktop {
+    height: 86px;
+  }
+}
+
 // For tools modal
 .modal-for-tools-skeleton {
   width: 100%;

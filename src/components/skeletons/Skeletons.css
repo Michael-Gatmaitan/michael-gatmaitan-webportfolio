@@ -3,6 +3,16 @@ div[class*=skeleton] {
   background-color: #888;
 }
 
+.nav-skeleton {
+  width: 100%;
+  height: 76px;
+}
+@media only screen and (min-width: 1025px) {
+  .nav-skeleton {
+    height: 86px;
+  }
+}
+
 .modal-for-tools-skeleton {
   width: 100%;
   height: 320px;
