@@ -75,11 +75,14 @@ function App() {
         </Suspense>
 
         <Suspense fallback={<>LOADING....</>}>
-          <Page02 />
+          <Page02 setShowModal={setShowModal} />
         </Suspense>
 
         <Suspense fallback={<>LOADING....</>}>
-          <Page03 />
+          <Page03
+            setShowProjectModal={setShowProjectModal}
+            setProjectData={setProjectData}
+          />
         </Suspense>
 
         {/* <Page01 />
