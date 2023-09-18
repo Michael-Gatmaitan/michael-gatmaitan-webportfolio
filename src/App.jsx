@@ -4,22 +4,15 @@ import React, { useState, Suspense, lazy } from "react";
 import "./components/styles/FloatingLogoQueries.css";
 
 // Components
-// import Nav from "./components/Nav";
 import SocMedIcons from "./components/SocMedIcons";
-// import ProjectModal from "./components/pages/03/ProjectModal";
 import BackgroundLogo from "./components/BackgroundLogo";
 
-// Pages
-// import Page01 from "./components/pages/01/index";
-// import Page02 from "./components/pages/02/index";
-// import Page03 from "./components/pages/03/index";
-
-// Skeletons for code-splitting
-import { Skeleton } from "./components/skeletons/Skeletons";
 import Loading from "./components/Loading";
 
-// import Skeleton from "react-loading-skeleton";
-// import { Skeleton } from "./components/skeletons/Skeletons";
+import { Skeleton } from "./components/skeletons/Skeletons";
+import SideBar from "./components/SideBar";
+
+import { AnimatePresence } from "framer-motion";
 
 const Nav = lazy(() => import("./components/Nav"));
 const ProjectModal = lazy(() => import("./components/pages/03/ProjectModal"));
@@ -29,20 +22,34 @@ const Page01 = lazy(() => import("./components/pages/01/index"));
 const Page02 = lazy(() => import("./components/pages/02/index"));
 const Page03 = lazy(() => import("./components/pages/03/index"));
 
+const buttons = [
+  { title: "ABOUT", key: 0 },
+  { title: "PROJECTS", key: 1 },
+  { title: "CONTACT", key: 2 },
+];
+
 function App() {
-  let [showModal, setShowModal] = useState(false);
+  const [showSideBar, setShowSideBar] = useState(false);
+
+  const [showModal, setShowModal] = useState(false);
 
   // Project's Modal states
-  let [showProjectModal, setShowProjectModal] = useState(false);
-  let [projectData, setProjectData] = useState({});
+  const [showProjectModal, setShowProjectModal] = useState(false);
+  const [projectData, setProjectData] = useState({});
 
   return (
     <>
       {/* <Root> */}
 
       <Suspense fallback={<Skeleton elementClassName='nav' />}>
-        <Nav />
+        <Nav buttons={buttons} setShowSideBar={setShowSideBar} />
       </Suspense>
+
+      <AnimatePresence>
+        {showSideBar && (
+          <SideBar buttons={buttons} setShowSideBar={setShowSideBar} />
+        )}
+      </AnimatePresence>
 
       <SocMedIcons />
 
@@ -69,7 +76,6 @@ function App() {
       <BackgroundLogo />
 
       <div className='page-container'>
-
         <Suspense fallback={<>LOADING....</>}>
           <Page01 />
         </Suspense>

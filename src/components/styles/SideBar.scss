@@ -1,0 +1,46 @@
+@import "../../mixins.scss";
+
+.sidebar {
+  width: 100vw;
+  height: 100vh;
+  background-color: #121212;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 100;
+  transition: 0.1s ease-in;
+
+  .sidebar-nav {
+    height: 76px;
+    width: 100%;
+    padding: 14px 24px;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+
+    img {
+      height: 19px;
+      cursor: pointer;
+    }
+  }
+
+  .button-container {
+    margin-top: 24px;
+    padding: 0 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    button {
+      cursor: pointer;
+      padding: 12px;
+      border-radius: 8px;
+      @include fontProp($montserrat, 500, 18px, #fff);
+      background-color: #00f;
+    }
+  }
+
+  @include desktop {
+    display: none;
+  }
+}

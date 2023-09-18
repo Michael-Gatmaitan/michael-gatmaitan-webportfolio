@@ -93,7 +93,7 @@ const Page03 = (props) => {
   const { setProjectData, setShowProjectModal } = props;
 
   return (
-    <div className='page page-03'>
+    <div className='page page-03' id='projects'>
       <div className='my-works-header'>My Projects</div>
       <div className='card-container'>
         {cardInfos.map((cardInfo) => (

@@ -1,8 +1,3 @@
-div[class*=skeleton] {
-  border-radius: 8px;
-  background-color: #888;
-}
-
 .nav-skeleton {
   width: 100%;
   height: 76px;

@@ -52,6 +52,7 @@ nav {
     }
 
     .burger-menu {
+      cursor: pointer;
       @include flexCenter;
 
       img {

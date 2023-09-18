@@ -47,6 +47,7 @@ nav .nav-wrapper .logo-container .logo-name {
   }
 }
 nav .nav-wrapper .burger-menu {
+  cursor: pointer;
   display: flex;
   place-items: center;
   justify-content: center;
