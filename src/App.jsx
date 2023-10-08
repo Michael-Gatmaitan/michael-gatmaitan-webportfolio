@@ -21,6 +21,7 @@ const ModalToolsMobile = lazy(() => import("./components/ModalToolsMobile"));
 const Page01 = lazy(() => import("./components/pages/01/index"));
 const Page02 = lazy(() => import("./components/pages/02/index"));
 const Page03 = lazy(() => import("./components/pages/03/index"));
+const Page04 = lazy(() => import("./components/pages/04/index"));
 
 const buttons = [
   { title: "ABOUT", key: 0 },
@@ -41,7 +42,7 @@ function App() {
     <>
       {/* <Root> */}
 
-      <Suspense fallback={<Skeleton elementClassName='nav' />}>
+      <Suspense fallback={<Skeleton elementClassName="nav" />}>
         <Nav buttons={buttons} setShowSideBar={setShowSideBar} />
       </Suspense>
 
@@ -75,7 +76,7 @@ function App() {
 
       <BackgroundLogo />
 
-      <div className='page-container'>
+      <div className="page-container">
         <Suspense fallback={<>LOADING....</>}>
           <Page01 />
         </Suspense>
@@ -89,6 +90,10 @@ function App() {
             setShowProjectModal={setShowProjectModal}
             setProjectData={setProjectData}
           />
+        </Suspense>
+
+        <Suspense fallback={<>LOADING....</>}>
+          <Page04 />
         </Suspense>
 
         {/* <Page01 />
