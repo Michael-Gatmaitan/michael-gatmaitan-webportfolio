@@ -13,9 +13,9 @@
 
     .stat-des {
       
-      .stat-header {
-        @include fontProp($montserrat, 700, 32px, #fff);
-      }
+      // .stat-header {
+      //   @include fontProp($montserrat, 700, 32px, #fff);
+      // }
 
       .stat-body-text {
         @include fontProp($Source-sans-pro, 400, 16px, rgba(#fff, 0.7));
@@ -58,16 +58,10 @@
       }
     }
 
+    // Place the 'more' button to right.
     .more-button-container {
       display: flex;
       justify-content: flex-end;
-
-      .more-button {
-        padding: 8px 27px;
-        background-color: #fff;
-        @include fontProp($Source-sans-pro, 600, 14px #121212);
-        border-radius: 4px;
-      }
     }
 
     @include tablet {

@@ -1,0 +1,26 @@
+@import "../../mixins.scss";
+
+.main-btn {
+  @include flexCenter;
+  @include fontProp($Source-sans-pro, 600, 14px, #121212);
+  padding: 8px 27px;
+  background-color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+  text-decoration: none;
+
+  &:hover {
+    background-color: darken($color: #fff, $amount: 12);
+    color: #000;
+  }
+
+  @include tablet {
+    padding: 10px 14px;
+    font-size: 16px;
+  }
+}
+
+.main-btn-wimg {
+  gap: 8px;
+}

@@ -21,31 +21,6 @@ nav .nav-wrapper {
   align-items: center;
   justify-content: space-between;
 }
-nav .nav-wrapper .logo-container {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-nav .nav-wrapper .logo-container .logo-image-container img {
-  height: 44px;
-}
-nav .nav-wrapper .logo-container .logo-name {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 700;
-  font-size: 14px;
-  color: #fff;
-}
-@media only screen and (min-width: 768px) {
-  nav .nav-wrapper .logo-container {
-    gap: 14px;
-  }
-  nav .nav-wrapper .logo-container .logo-image-container img {
-    height: 50px;
-  }
-  nav .nav-wrapper .logo-container .logo-name {
-    font-size: 16px !important;
-  }
-}
 nav .nav-wrapper .burger-menu {
   cursor: pointer;
   display: flex;

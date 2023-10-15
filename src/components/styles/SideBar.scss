@@ -9,34 +9,51 @@
   top: 0;
   z-index: 100;
   transition: 0.1s ease-in;
+  padding: 0 24px;
 
   .sidebar-nav {
     height: 76px;
     width: 100%;
-    padding: 14px 24px;
+    padding: 14px 0;
     display: flex;
-    flex-direction: row-reverse;
+    justify-content: space-between;
     align-items: center;
 
-    img {
-      height: 19px;
-      cursor: pointer;
+    .logo {
+      width: 48px;
+      height: 48px;
+      background-color: #0f0;
+    }
+
+
+
+    .close-sidebar {
+      display: flex;
+
+      img {
+        height: 25px;
+        cursor: pointer;
+      }
     }
   }
 
   .button-container {
-    margin-top: 24px;
-    padding: 0 24px;
+    margin: 24px 0 24px 0;
     display: flex;
     flex-direction: column;
     gap: 12px;
 
     button {
       cursor: pointer;
-      padding: 12px;
+      padding: 12px 0;
       border-radius: 8px;
-      @include fontProp($montserrat, 500, 18px, #fff);
-      background-color: #00f;
+      @include fontProp($montserrat, 400, 18px, #fff);
+      background-color: transparent;
+      transition: 0.1s ease;
+
+      &:hover {
+      font-weight: bold;
+      }
     }
   }
 

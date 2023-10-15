@@ -1,7 +1,7 @@
-import "./Card.css";
+import './ProjectCard.css';
 
-const Card = ({ cardInfo, setShowProjectModal, setProjectData }) => {
-  const { title, logoSrc, bgHexColor } = cardInfo;
+const ProjectCard = ({ projectCardInfo, setShowProjectModal, setProjectData }) => {
+  const { title, logoSrc, bgHexColor } = projectCardInfo;
 
   const projectLogo = `./images/project-logos/${logoSrc}.png`;
 
@@ -10,7 +10,7 @@ const Card = ({ cardInfo, setShowProjectModal, setProjectData }) => {
       className='project-card'
       onClick={() => {
         setShowProjectModal(true);
-        setProjectData(cardInfo);
+        setProjectData(projectCardInfo);
       }}
     >
       <div className='project-title'>{title}</div>
@@ -25,4 +25,4 @@ const Card = ({ cardInfo, setShowProjectModal, setProjectData }) => {
   );
 };
 
-export default Card;
+export default ProjectCard;

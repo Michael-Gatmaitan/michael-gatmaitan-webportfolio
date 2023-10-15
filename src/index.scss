@@ -61,4 +61,16 @@ button {
   // max-height: ;
   padding-bottom: 100px;
   position: relative;
+
+  .page-header {
+    @include fontProp("Montserrat", 700, 32px, #fff);
+
+    @include tablet {
+      font-size: 36px !important;
+    }
+
+    @include desktop {
+      font-size: 48px !important;
+    }
+  }
 }

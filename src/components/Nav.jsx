@@ -1,3 +1,4 @@
+import LogoComponent from "./LogoComponent";
 import "./styles/Nav.css";
 import { motion } from "framer-motion";
 
@@ -23,17 +24,7 @@ const Nav = ({ buttons, setShowSideBar }) => {
   return (
     <nav>
       <div className='nav-wrapper'>
-        <div className='logo-container'>
-          <div className='logo-image-container'>
-            <img src='./svg/my-logo/mg_logo_white.svg' alt='white-logo' />
-          </div>
-
-          <div className='logo-name'>
-            MICHAEL
-            <br />
-            GATMAITAN
-          </div>
-        </div>
+        <LogoComponent />
 
         <div className='burger-menu' onClick={() => setShowSideBar(true)}>
           <img src='./svg/body-icons/burger-menu.svg' alt='burger-menu' />

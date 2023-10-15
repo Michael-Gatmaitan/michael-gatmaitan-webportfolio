@@ -60,4 +60,20 @@ button {
   min-height: 100vh;
   padding-bottom: 100px;
   position: relative;
+}
+.page .page-header {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 32px;
+  color: #fff;
+}
+@media only screen and (min-width: 768px) {
+  .page .page-header {
+    font-size: 36px !important;
+  }
+}
+@media only screen and (min-width: 1025px) {
+  .page .page-header {
+    font-size: 48px !important;
+  }
 }/*# sourceMappingURL=index.css.map */

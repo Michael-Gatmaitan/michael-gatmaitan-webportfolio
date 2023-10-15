@@ -54,16 +54,15 @@ function App() {
 
       <SocMedIcons />
 
-      {
-        <Suspense fallback={<Loading />}>
-          <ModalToolsMobile
-            showModal={showModal}
-            setShowModal={setShowModal}
-            modalType={true}
-          />
-        </Suspense>
-      }
+      <Suspense fallback={<Loading />}>
+        <ModalToolsMobile
+          showModal={showModal}
+          setShowModal={setShowModal}
+          modalType={true}
+        />
+      </Suspense>
 
+      {/* Showing PROJECT MODAL */}
       {showProjectModal ? (
         <Suspense fallback={"Loading"}>
           <ProjectModal

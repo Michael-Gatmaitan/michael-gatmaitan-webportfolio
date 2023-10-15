@@ -1,5 +1,6 @@
 // import { useState } from 'react';
 import PageNumber from "../../PageNumber";
+import MainButton from '../../Buttons/MainButton';
 import "./Page02.css";
 
 import ModalForTools from "./ModalForTools.jsx";
@@ -18,7 +19,7 @@ const Page02 = ({ setShowModal }) => {
     <div className='page page-02' id='about'>
       <div className='stats'>
         <div className='stat-des'>
-          <div className='stat-header'>IM A FRONT-END DEVELOPER</div>
+          <div className='page-header'>IM A FRONT-END DEVELOPER</div>
           <div className='stat-body-text'>
             from Marilao, Bulacan, Philippines. I’m 18 years old, and I taught
             myself how to code for 3 years now. I finished my senior high-school
@@ -38,16 +39,16 @@ const Page02 = ({ setShowModal }) => {
         </div>
 
         <div className='more-button-container'>
-          <button className='more-button' onClick={() => setShowModal(true)}>
+          <MainButton onClickFunc={() => setShowModal(true)}>
             More
-          </button>
+          </MainButton>
         </div>
       </div>
 
       <div className='tools-container'>
         <ModalForTools
           setShowModal={setShowModal}
-          // @ts-ignore
+          
           modalType={true}
         />
       </div>

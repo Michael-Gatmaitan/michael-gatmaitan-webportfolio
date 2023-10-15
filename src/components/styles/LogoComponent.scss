@@ -1,0 +1,31 @@
+@import '../../mixins.scss';
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    .logo-image-container {
+      img {
+        height: 44px;
+      }
+    }
+
+    .logo-name {
+      @include fontProp($montserrat, 700, 14px, #fff);
+    }
+
+    @include tablet {
+      gap: 14px;
+
+      .logo-image-container {
+        img {
+          height: 50px;
+        }
+      }
+
+      .logo-name {
+        font-size: 16px !important;
+      }
+    }
+  }

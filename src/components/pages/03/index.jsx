@@ -1,11 +1,12 @@
 import { lazy, Suspense } from "react";
 import PageNumber from "../../PageNumber";
 import "./Page03.css";
+// import "./Card.css";
 import { Skeleton } from "../../skeletons/Skeletons";
 
-const Card = lazy(() => import("./Card.jsx"));
+const ProjectCard = lazy(() => import("./ProjectCard.jsx"));
 
-const cardInfos = [
+const projectCardInfos = [
   {
     id: 0,
     siteLink: "https://mchlgtmtn-posty.netlify.app/",
@@ -94,16 +95,16 @@ const Page03 = (props) => {
 
   return (
     <div className='page page-03' id='projects'>
-      <div className='my-works-header'>My Projects</div>
+      <div className='page-header'>My Projects</div>
       <div className='card-container'>
-        {cardInfos.map((cardInfo) => (
+        {projectCardInfos.map((projectCardInfo) => (
           <Suspense
             fallback={<Skeleton elementClassName='card' />}
-            key={cardInfo.id}
+            key={projectCardInfo.id}
           >
-            <Card
-              cardInfo={cardInfo}
-              id={cardInfo.id}
+            <ProjectCard
+              projectCardInfo={projectCardInfo}
+              id={projectCardInfo.id}
               setShowProjectModal={setShowProjectModal}
               setProjectData={setProjectData}
             />
