@@ -22,9 +22,10 @@ const Page02 = ({ setShowModal }) => {
           <div className='page-header'>IM A FRONT-END DEVELOPER</div>
           <div className='stat-body-text'>
             from Marilao, Bulacan, Philippines. I’m 18 years old, and I taught
-            myself how to code for 3 years now. I finished my senior high-school
+            myself how to code for 3 years now.
+            {/* I finished my senior high-school
             last year (2020) and now, I’m hoping that I can land my first job in
-            tech to help my parents financially stabled.
+            tech to help my parents financially stabled. */}
           </div>
         </div>
 
