@@ -1,2 +1,2 @@
 # Hi! I'm Michael Gatmaitan
-I'm 18 years old and currently stopped studying to taught myself more how to code. I'm from Marilao, Bulacan, Philippines and hoping to land my first tech job this year to help my parents financially.
+I'm 18 years old
